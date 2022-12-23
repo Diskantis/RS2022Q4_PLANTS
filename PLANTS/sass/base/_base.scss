@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  @extend %font-primary;
+  @include font($size: 2rem, $height: 3.5rem, $weight: 400);
+}
+
+
+h1 {
+  color: $color-text_gray;
+  @extend %font-primary;
+  @include font($size: 4.5rem, $height: 5.0rem, $weight: 700);
+}
+
+h2 {
+  color: $color-text_green;
+  @extend %font-secondary;
+  @include font($size: 4.0rem, $height: 5.2rem);
+}
+
+h3 {
+   color: $color-text_btn;
+   @extend %font-primary;
+   @include font($size: 2.0rem, $height: 2.0rem, $weight: 700);
+ }

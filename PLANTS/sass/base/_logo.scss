@@ -1,0 +1,18 @@
+.logo-object {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.logo-svg {
+  cursor: pointer;
+  align-content: center;
+  &:hover {
+    .logo-path {
+      fill: $color-head-nav_hover;
+    }
+  }
+}
+
+.logo-path {
+  @extend %transition;
+}

@@ -1,10 +1,27 @@
-html {
-  font-size: 10px;
-}
+// Vendors
+@import "vendors/normalize";
 
-body {
-  font-size: 2rem;
-  font-family: Inter, Verdana, sans-serif;
-}
-//font-family: 'Inika', serif;
-//font-family: 'Inter', sans-serif;
+// Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+// Base
+@import "base/base";
+@import "base/logo";
+@import "base/buttons";
+@import "base/icons";
+
+// Layouts
+@import "layouts/wrapper";
+@import "layouts/navigation";
+@import "layouts/columns";
+@import "layouts/header";
+@import "layouts/footer";
+
+// Components
+@import "components/welcome";
+@import "components/about";
+@import "components/service";
+@import "components/prices";
+@import "components/contacts";

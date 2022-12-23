@@ -1,0 +1,23 @@
+.page-welcome {
+  background: $color-bg_secondary;
+  padding: 62px 109px;
+}
+
+.welcome__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome__image {
+  width: 449px;
+  height: 408px;
+}
+
+.welcome__content{
+  padding-left: 228px;
+}
+
+.welcome-h1_color {
+  color: $color-text_green;
+}

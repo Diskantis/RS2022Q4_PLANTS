@@ -8,16 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/favicon/favicon_plants.svg" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="stylesheet" href="sass/style.css">
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
+        <div class="wrapper header__wrapper">
             <a href="#" class="logo">
                 <object type="image/svg+xml" data="img/logo.svg" class="logo-object">
                     Your browser does not support SVG
                 </object>
-                <span>Plants</span>
             </a>
             <nav class="header__navigation">
                 <ul class="navigation">
@@ -32,9 +31,10 @@
     </header>
     <main>
         <section id="anchor-1" class="page-welcome">
-            <div class="wrapper">
+            <div class="wrapper welcome__wrapper">
+                <img src="./img/welcome/leafs.png" class="welcome__image" alt="The Design Thinking superpowers">
                 <div class="welcome__content">
-                    <h1>We grow plants and give you oxygen</h1>
+                    <h1>We grow <span class="welcome-h1_color">plants</span> and give you oxygen</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     <button class="button button_welcome">LEARN MORE</button>
                 </div>
@@ -43,7 +43,7 @@
         <section id="anchor-2" class="page-about">
             <div class="wrapper">
                 <div class="about__content">
-                    <h2>We are professional experienced gardeners</h2>
+                    <h2>We are<span class="about-h2_color"> professional experienced</span> gardeners</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
             </div>
@@ -104,7 +104,7 @@
         </section>
         <section id="anchor-4" class="page-prices">
             <div class="wrapper">
-                <h2>Prices</h2>
+                <h2 class="prices__text">Prices</h2>
                 <div class="layout-2-column">
                     <div class="prices__buttons">
                         <button class="button button_price">Basics</button>
@@ -112,7 +112,7 @@
                         <button class="button button_price">Pro care</button>
                     </div>
                     <div>
-                        <span>Our best gardeners are ready to help you</span>
+                        <span class="prices__text">Our best <span class="prices__text_colored">gardeners</span> are ready to help you</span>
                         <button class="button button_colored">Contact us</button>
                     </div>
                 </div>
