@@ -1,3 +1,28 @@
-.about-h2_color {
+.page-about {
+  background: $color-bg_primary;
+  padding: 93px 109px 94px;
+}
+
+.about__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__content{
+  display: block;
+  padding-right: 155px;
+}
+
+.about__title {
+  margin: 40px 0;
+}
+
+.about__title span {
   color: $color-text_red;
+}
+
+.about__text {
+  margin: 35px 0;
+  line-height: 1.5;
 }
