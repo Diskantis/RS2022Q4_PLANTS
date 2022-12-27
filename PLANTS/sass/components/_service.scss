@@ -1,3 +1,39 @@
+.page-service {
+  background: $color-bg_secondary;
+  padding: 40px 109px 121px;
+}
+
+.service__wrapper {
+  justify-content: space-between;
+}
+
+.service__content {
+  display: flex;
+  align-items: center;
+  margin: 0 0 80px;
+}
+
+.service__title {
+  width: 306px;
+  margin-right: 142px;
+
+}
+
 .service__buttons {
   display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.block__content {
+  display: block;
+}
+
+.block__name {
+
+}
+
+.block__text {
+
 }

@@ -18,8 +18,10 @@
   &_colored {
     @extend %font-secondary;
     @include font ($size: 2.0rem, $height: 2.6rem);
-    padding: 15px 40px;
-    margin: 10px;
+    border-radius: 5px;
+    width: 161px;
+    height: 50px;
+    margin-right: 38px;
     background-color: transparent;
     border: 1px solid $color-btn_colored;
     color: $color-btn_colored;
