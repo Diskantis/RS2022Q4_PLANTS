@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.prices__text, .button, h3, h1, body {
+.prices__title, .block__text, .button, h3, h1, body {
   font-family: Inter, Verdana, sans-serif;
 }
 
@@ -458,6 +458,8 @@ h3 {
   line-height: 2rem;
   font-weight: 700;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .logo-object {
@@ -491,7 +493,7 @@ h3 {
 }
 .button_welcome:hover {
   background-color: #E06733;
-  border-color: #E06733;
+  border-color: #FFFFFF;
 }
 .button_colored {
   font-size: 2rem;
@@ -509,7 +511,7 @@ h3 {
 .button_colored:hover {
   background-color: #E06733;
   border-color: #E06733;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .wrapper {
@@ -584,6 +586,7 @@ h3 {
 }
 
 .welcome__text {
+  color: #636060;
   margin-bottom: 45px;
 }
 
@@ -616,13 +619,14 @@ h3 {
 }
 
 .about__text {
+  color: #636060;
   margin: 35px 0;
   line-height: 1.5;
 }
 
 .page-service {
   background: #EDF2EC;
-  padding: 40px 109px 121px;
+  padding: 40px 109px 65px;
 }
 
 .service__wrapper {
@@ -632,7 +636,7 @@ h3 {
 .service__content {
   display: flex;
   align-items: center;
-  margin: 0 0 80px;
+  margin: 0 0 78px;
 }
 
 .service__title {
@@ -643,22 +647,40 @@ h3 {
 .service__buttons {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
+}
+
+.service-block {
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  margin-bottom: 53px;
 }
 
 .block__content {
-  display: block;
+  text-align: center;
 }
 
-.prices__text {
+.block__name {
+  color: #E06733;
+  margin: 0 0 13px;
+}
+
+.block__text {
+  color: #717171;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 36px;
+}
+
+.prices__title {
   color: #000000;
   font-size: 4rem;
   line-height: 4.8rem;
   font-weight: 700;
   font-style: normal;
 }
-.prices__text_colored {
+.prices__title_colored {
   color: #499A18;
 }
 

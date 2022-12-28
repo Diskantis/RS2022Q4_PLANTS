@@ -8,11 +8,11 @@
     width: 158px;
     height: 44px;
     background-color: transparent;
-    border: 2px solid $color-btn_colored;
-    color: $color-text_btn;
+    border: 2px solid $color-text_colored;
+    color: $color-text_black;
     &:hover {
-      background-color: $color-btn_colored;
-      border-color: $color-btn_colored;
+      background-color: $color-text_colored;
+      border-color: $color-bg_primary;
     }
   }
   &_colored {
@@ -23,12 +23,12 @@
     height: 50px;
     margin-right: 38px;
     background-color: transparent;
-    border: 1px solid $color-btn_colored;
-    color: $color-btn_colored;
+    border: 1px solid $color-text_colored;
+    color: $color-text_colored;
     &:hover {
-      background-color: $color-btn_colored;
-      border-color: $color-btn_colored;
-      color: $color-text_withe;
+      background-color: $color-text_colored;
+      border-color: $color-text_colored;
+      color: $color-bg_primary;
     }
   }
 }

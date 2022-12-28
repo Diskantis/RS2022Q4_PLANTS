@@ -1,5 +1,5 @@
-.prices__text {
-  color: $color-text_btn;
+.prices__title {
+  color: $color-text_black;
   @extend %font-primary;
   @include font($size: 4.0rem, $height: 4.8rem, $weight: 700);
   &_colored {

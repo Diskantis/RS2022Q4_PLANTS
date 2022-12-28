@@ -19,10 +19,11 @@
 }
 
 .about__title span {
-  color: $color-text_red;
+  color: $color-text_colored;
 }
 
 .about__text {
+  color: $color-text_gray;
   margin: 35px 0;
   line-height: 1.5;
 }

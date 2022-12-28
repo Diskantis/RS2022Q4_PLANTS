@@ -11,6 +11,6 @@
   cursor: pointer;
   @extend %transition;
   &:hover {
-    color: $color-head-nav_hover;
+    color: $color-text_colored;
   }
 }

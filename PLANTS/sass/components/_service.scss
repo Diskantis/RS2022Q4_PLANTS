@@ -1,6 +1,6 @@
 .page-service {
   background: $color-bg_secondary;
-  padding: 40px 109px 121px;
+  padding: 40px 109px 65px;
 }
 
 .service__wrapper {
@@ -10,30 +10,37 @@
 .service__content {
   display: flex;
   align-items: center;
-  margin: 0 0 80px;
+  margin: 0 0 78px;
 }
 
 .service__title {
   width: 306px;
   margin-right: 142px;
-
 }
 
 .service__buttons {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
+}
+
+.service-block {
+  border: 1px solid $color-block_border;
+  border-radius: 20px;
+  margin-bottom: 53px;
 }
 
 .block__content {
-  display: block;
+  text-align: center;
 }
 
 .block__name {
-
+  color: $color-text_colored;
+  margin: 0 0 13px;
 }
 
 .block__text {
-
+  color: $color-text_h1_block;
+  @extend %font-primary;
+  @include font($size: 1.6rem, $height: 2.0rem);
+  margin-bottom: 36px;
 }
