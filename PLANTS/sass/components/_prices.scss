@@ -1,8 +1,25 @@
+.page-prices {
+  background: $color-bg_primary;
+  padding: 38px 109px 115px;
+}
+
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
   @include font($size: 4.0rem, $height: 4.8rem, $weight: 700);
-  &_colored {
-    color: $color-text_green;
-  }
+}
+
+.prices__block {
+  border: 1px solid $color-block_border;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+
+.block__buttons {
+  display: block;
+  margin: 34px 41px;
+}
+
+.prices__title span {
+  color: $color-text_green;
 }

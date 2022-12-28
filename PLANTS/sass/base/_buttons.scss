@@ -1,27 +1,28 @@
 .button {
   @extend %font-primary;
   @include font ($size: 1.6rem, $height: 2.0rem);
-  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s;
   &_welcome {
     width: 158px;
     height: 44px;
+    border-radius: 10px;
     background-color: transparent;
     border: 2px solid $color-text_colored;
     color: $color-text_black;
     &:hover {
       background-color: $color-text_colored;
       border-color: $color-bg_primary;
+      color: $color-bg_primary
     }
   }
   &_colored {
     @extend %font-secondary;
     @include font ($size: 2.0rem, $height: 2.6rem);
-    border-radius: 5px;
     width: 161px;
     height: 50px;
     margin-right: 38px;
+    border-radius: 5px;
     background-color: transparent;
     border: 1px solid $color-text_colored;
     color: $color-text_colored;
@@ -31,13 +32,35 @@
       color: $color-bg_primary;
     }
   }
+  &_price {
+    @include font ($size: 2.0rem, $height: 2.0rem, $weight: 700);
+    width: 250px;
+    height: 50px;
+    margin-bottom: 32px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-price_btn;
+    border: 0.5px solid $color-price_btn;
+    color: $color-text_black;
+    padding: 0 40px;
+  }
+  &_city {
+    @include font ($size: 2.0rem, $height: 4.0rem);
+    letter-spacing: 0.05em;
+    width: 450px;
+    height: 50px;
+    border-radius: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-price_btn-hover;
+    border: 0.5px solid $color-price_btn-hover;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: $color-text_h1_block;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 35px;
+  }
 }
-
-
-.button_price {
-
-}
-
-.button_city {
-
- }
