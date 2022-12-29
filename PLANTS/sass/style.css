@@ -550,24 +550,26 @@ h3 {
   text-align: left;
   padding-left: 20px;
   padding-right: 35px;
+  margin-left: 372px;
 }
 
-.ico-circle {
-  fill: inherit;
+.ico {
+  display: inline-flex;
+  cursor: pointer;
 }
 
-.ico-path {
-  stroke: currentColor;
+.ico_btn-price {
+  background-image: url("../img/icons/ico-accord_btn-price.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
 }
 
-.ico-price use {
-  fill: #E06733;
-  color: black;
-}
-
-.ico-city use {
-  fill: red;
-  color: white;
+.ico_btn-city {
+  background-image: url("../img/icons/ico-accord_btn-city.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
 }
 
 .wrapper {
@@ -753,18 +755,24 @@ h3 {
 
 .page-prices {
   background: #FFFFFF;
-  padding: 38px 109px 115px;
+  padding: 38px 109px 104px;
+}
+
+.prices-column_one {
+  display: block;
 }
 
 .prices__title {
   color: #000000;
   font-size: 4rem;
-  line-height: 4.8rem;
+  line-height: 4.9rem;
   font-weight: 700;
   font-style: normal;
 }
 
 .prices__block {
+  width: 332px;
+  height: 282px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
   margin-top: 60px;
@@ -772,16 +780,44 @@ h3 {
 
 .block__buttons {
   display: block;
-  margin: 34px 41px;
+  margin: 33px 40px;
 }
 
 .prices__title span {
   color: #499A18;
 }
 
+.prices-column_two {
+  display: block;
+  text-align: right;
+}
+
+.button_pos {
+  display: block;
+  margin: 42px 0 0 auto;
+}
+
+.prices__image {
+  width: 152px;
+  height: 175px;
+  margin: 39px 0 0 auto;
+}
+
 .page-contacts {
   background: #EDF2EC;
-  padding: 40px 109px 68px;
+  padding: 53px 109px 0;
+}
+
+.contacts__content {
+  display: flex;
+}
+
+.contacts__title {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  font-weight: 700;
+  font-style: normal;
+  margin: 7px 0 36px 113px;
 }
 
 /*# sourceMappingURL=style.css.map */

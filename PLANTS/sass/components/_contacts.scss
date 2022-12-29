@@ -1,4 +1,13 @@
 .page-contacts {
   background: $color-bg_secondary;
-  padding: 40px 109px 68px;
+  padding: 53px 109px 0;
+}
+
+.contacts__content {
+  display: flex;
+}
+
+.contacts__title {
+  @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
+  margin: 7px 0 36px 113px;
 }

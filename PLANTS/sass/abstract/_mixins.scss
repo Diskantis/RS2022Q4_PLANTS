@@ -11,14 +11,3 @@
   justify-content: space-between;
   >* { flex-basis: $width; }
 }
-
-@mixin ico_btn ($circle_color, $path_color) {
-    cursor: pointer;
-    align-content: center;
-    &_circle {
-      fill: $circle_color;
-    }
-    &_path {
-      stroke: $path_color;
-    }
-}

@@ -1,15 +1,21 @@
 .page-prices {
   background: $color-bg_primary;
-  padding: 38px 109px 115px;
+  padding: 38px 109px 104px;
+}
+
+.prices-column_one {
+  display: block;
 }
 
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
-  @include font($size: 4.0rem, $height: 4.8rem, $weight: 700);
+  @include font($size: 4.0rem, $height: 4.9rem, $weight: 700);
 }
 
 .prices__block {
+  width: 332px;
+  height: 282px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
   margin-top: 60px;
@@ -17,9 +23,25 @@
 
 .block__buttons {
   display: block;
-  margin: 34px 41px;
+  margin: 33px 40px;
 }
 
 .prices__title span {
   color: $color-text_green;
+}
+
+.prices-column_two {
+  display: block;
+  text-align: right;
+}
+
+.button_pos {
+  display: block;
+  margin: 42px 0 0 auto;
+}
+
+.prices__image {
+  width: 152px;
+  height: 175px;
+  margin: 39px 0 0 auto;
 }
