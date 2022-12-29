@@ -1,26 +1,53 @@
-.ico {
-  display: inline-flex;
-  cursor: pointer;
+.ico-circle {
+  fill: inherit;
 }
 
-.ico_buttons {
-  background-image: url("../img/icons/ico-accordion_btn.svg");
-  background-repeat: no-repeat;
-  //justify-content: right;
-  //margin-left: 54px;
-  width: 16px;
-  height: 16px;
+.ico-path {
+  stroke: currentColor;
 }
+
+.ico-price use {
+  fill: #E06733;
+  color: black;
+}
+
+.ico-city use {
+  fill: red;
+  color: white;
+}
+
+
+//.ico {
+//  display: inline-flex;
+//  cursor: pointer;
+//  &_btn {
+//  @include ico_btn ($circle_color: $color-text_colored, $path_color: $color-price_btn-ico)
+//  }
+//}
+
+
+//.ico_buttons {
+//  background-image: url("../img/icons/ico-accordion_btn.svg");
+//  background-repeat: no-repeat;
+//  //justify-content: right;
+//  //margin-left: 54px;
+//  width: 16px;
+//  height: 16px;
+//}
 
 //.ico_btn {
+//
+//}
+
+//.ico_btn-price {
 //  cursor: pointer;
 //  align-content: center;
-//  &_circle {
-//    fill: $color-price_btn-ico;
+//  &:after {
+//    .ico_btn_circle {
+//      fill: $color-text_colored;
+//    }
+//    .ico_btn_path {
+//      stroke: $color-price_btn-ico;
+//    }
 //  }
-//  &_path {
-//    stroke: $color-text_h1_block;
-//  }
-//  //  &:hover {
-//  //  }
 //}
