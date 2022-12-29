@@ -413,7 +413,7 @@ section, main, footer, header, article {
   font-family: Inika, Verdana, sans-serif;
 }
 
-.navigation__link a, .logo-path {
+.social_icon, .footer-content a, .navigation__link a, .logo-path {
   transition: all 0.3s ease-out;
 }
 
@@ -458,6 +458,11 @@ h3 {
   line-height: 2rem;
   font-weight: 700;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+a {
   margin: 0;
   padding: 0;
 }
@@ -625,16 +630,62 @@ h3 {
 }
 
 .page-footer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
   background: #FFFFFF;
-  padding: 40px 109px 115px;
+  padding: 40px 109px;
 }
 
 .footer-content {
   display: inline-flex;
+  align-items: center;
+}
+
+.footer-content a {
+  color: #000000;
+  font-size: 2rem;
+  line-height: 5rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration-line: none;
+  cursor: pointer;
+}
+.footer-content a:hover {
+  color: #E06733;
+}
+
+.footer__year {
+  margin-left: 20px;
+}
+
+.github {
+  margin-left: 20px;
+}
+
+.footer__rss {
+  margin: 0 300px 0 338px;
 }
 
 .social-icons {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  margin-left: 20px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.social_icon {
+  height: 32px;
+  width: 32px;
+}
+.social_icon:hover {
+  filter: invert(70%);
 }
 
 .page-welcome {
