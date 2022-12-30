@@ -1,6 +1,6 @@
 .page-prices {
   background: $color-bg_primary;
-  padding: 38px 109px 104px;
+  padding: 38px 109px 105px;
 }
 
 .prices-column_one {
@@ -10,7 +10,7 @@
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
-  @include font($size: 4.0rem, $height: 4.9rem, $weight: 700);
+  @include font($size: 4.0rem, $height: 5.0rem, $weight: 700);
 }
 
 .prices__block {
@@ -23,7 +23,7 @@
 
 .block__buttons {
   display: block;
-  margin: 33px 40px;
+  margin: 33px 40px 0;
 }
 
 .prices__title span {
@@ -37,7 +37,7 @@
 
 .button_pos {
   display: block;
-  margin: 42px 0 0 auto;
+  margin: 40px 0 0 auto;
 }
 
 .prices__image {

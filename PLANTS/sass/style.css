@@ -462,11 +462,6 @@ h3 {
   padding: 0;
 }
 
-a {
-  margin: 0;
-  padding: 0;
-}
-
 .logo-object {
   display: flex;
   margin-bottom: 10px;
@@ -620,7 +615,7 @@ a {
 
 .header {
   background: #EDF2EC;
-  padding: 42px 0 42px 0;
+  padding: 42px 109px 42px 111px;
 }
 
 .header__wrapper {
@@ -630,15 +625,13 @@ a {
 }
 
 .page-footer {
-  display: flex;
-  justify-content: right;
-  align-items: center;
   background: #FFFFFF;
-  padding: 40px 109px;
+  padding: 40px 108px 40px 110px;
 }
 
 .footer-content {
-  display: inline-flex;
+  display: flex;
+  justify-content: left;
   align-items: center;
 }
 
@@ -664,10 +657,11 @@ a {
 }
 
 .footer__rss {
-  margin: 0 300px 0 338px;
+  margin-left: 340px;
 }
 
 .social-icons {
+  margin-left: 298px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -690,7 +684,7 @@ a {
 
 .page-welcome {
   background: #EDF2EC;
-  padding: 62px 109px 60px;
+  padding: 62px 109px 62.642px;
 }
 
 .welcome__wrapper {
@@ -700,15 +694,16 @@ a {
 }
 
 .welcome__image {
-  width: 448px;
+  height: 407.36px;
 }
 
 .welcome__content {
   display: block;
-  padding-left: 225px;
+  padding-left: 226px;
 }
 
 .welcome__title {
+  margin-top: 34px;
   margin-bottom: 45px;
 }
 
@@ -742,7 +737,8 @@ a {
 }
 
 .about__title {
-  margin: 40px 0;
+  margin-top: 67px;
+  margin-bottom: 38px;
 }
 
 .about__title span {
@@ -751,8 +747,8 @@ a {
 
 .about__text {
   color: #636060;
-  margin: 35px 0;
   line-height: 1.5;
+  margin-bottom: 60px;
 }
 
 .page-service {
@@ -766,8 +762,7 @@ a {
 
 .service__content {
   display: flex;
-  align-items: center;
-  margin: 0 0 78px;
+  margin-bottom: 78px;
 }
 
 .service__title {
@@ -778,6 +773,8 @@ a {
 .service__buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 29px;
+  margin-bottom: 25px;
 }
 
 .service-block {
@@ -806,7 +803,7 @@ a {
 
 .page-prices {
   background: #FFFFFF;
-  padding: 38px 109px 104px;
+  padding: 38px 109px 105px;
 }
 
 .prices-column_one {
@@ -816,7 +813,7 @@ a {
 .prices__title {
   color: #000000;
   font-size: 4rem;
-  line-height: 4.9rem;
+  line-height: 5rem;
   font-weight: 700;
   font-style: normal;
 }
@@ -831,7 +828,7 @@ a {
 
 .block__buttons {
   display: block;
-  margin: 33px 40px;
+  margin: 33px 40px 0;
 }
 
 .prices__title span {
@@ -845,7 +842,7 @@ a {
 
 .button_pos {
   display: block;
-  margin: 42px 0 0 auto;
+  margin: 40px 0 0 auto;
 }
 
 .prices__image {

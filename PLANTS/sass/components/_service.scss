@@ -9,8 +9,7 @@
 
 .service__content {
   display: flex;
-  align-items: center;
-  margin: 0 0 78px;
+  margin-bottom: 78px;
 }
 
 .service__title {
@@ -21,6 +20,8 @@
 .service__buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 29px;
+  margin-bottom: 25px;
 }
 
 .service-block {

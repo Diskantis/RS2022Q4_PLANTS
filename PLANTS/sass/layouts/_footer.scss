@@ -1,12 +1,11 @@
 .page-footer {
-  display: flex;
-  justify-content: right;
-  align-items: center;
   background: $color-bg_primary;
-  padding: 40px 109px;
+  padding: 40px 108px 40px 110px;
 }
+
 .footer-content {
-  display: inline-flex;
+  display: flex;
+  justify-content: left;
   align-items: center;
 }
 
@@ -30,14 +29,15 @@
 }
 
 .footer__rss {
-  margin: 0 300px 0 338px;
+  margin-left: 340px;
 }
 
 .social-icons {
+  margin-left: 298px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  //margin-left: 20px;
+
 }
 
 .social__link {
