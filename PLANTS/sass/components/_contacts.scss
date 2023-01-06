@@ -1,13 +1,30 @@
 .page-contacts {
   background: $color-bg_secondary;
   padding: 53px 109px 0;
+  overflow: hidden;
+}
+
+.contacts__wrapper {
+  display: flex;
+  //justify-content: space-between;
 }
 
 .contacts__content {
-  display: flex;
+  text-align: right;
 }
 
 .contacts__title {
   @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
+  text-align: left;
   margin: 7px 0 36px 113px;
+  @include media-desktop {
+    margin: 7px 0 36px 0;
+  }
+}
+
+.contacts__button {
+  //margin: 0 0 0 372px;
+  //@include media-desktop {
+  //  margin: 0;
+  //}
 }

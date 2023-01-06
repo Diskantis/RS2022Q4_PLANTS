@@ -1,13 +1,20 @@
+.header__navigation {
+  width: 452px;
+}
+
 .navigation {
   display: flex;
+  justify-content: space-between;
   @extend %font-secondary;
   @include font ($size: 1.6rem, $height: 5.0rem);
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .navigation__link a {
   color: $color-head-nav;
   text-decoration-line: none;
-  padding-left: 47px;
   cursor: pointer;
   @extend %transition;
   &:hover {

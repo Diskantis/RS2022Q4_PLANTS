@@ -3,9 +3,16 @@
   padding: 40px 108px 40px 110px;
 }
 
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 .footer-content {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -24,20 +31,25 @@
   margin-left: 20px;
 }
 
-.github {
+.footer__github {
   margin-left: 20px;
 }
 
 .footer__rss {
-  margin-left: 340px;
+  color: $color-text_black;
+  @include font($size: 2.0rem, $height: 5.0rem);
+  text-decoration-line: none;
+  margin-left: 35px;
+  @extend %transition;
+  &:hover {
+    color: $color-text_colored;
+  }
 }
 
 .social-icons {
-  margin-left: 298px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .social__link {
