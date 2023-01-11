@@ -1,59 +1,77 @@
 .page-footer {
   background: $color-bg_primary;
   padding: 40px 108px 40px 110px;
+
+  @include media-tablet {
+    padding: 33px 279px 18px;
+  }
+
+  @include media-mobile {
+    padding: 22px 85px 7px;
+  }
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+
+  @include media-tablet {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.footer-content {
+.footer__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+   @include media-tablet {
+      display: block;
+      margin: 0 auto;
+    }
+}
+
+.footer__year-git {
+  width: 168px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-content a {
+.footer__github {
   color: $color-text_black;
   @include font($size: 2.0rem, $height: 5.0rem);
   text-decoration-line: none;
   cursor: pointer;
+  //margin-right: 17px;
   @extend %transition;
   &:hover {
     color: $color-text_colored;
   }
-}
-
-.footer__year {
-  margin-left: 20px;
-}
-
-.footer__github {
-  margin-left: 20px;
 }
 
 .footer__rss {
+  white-space: nowrap;
   color: $color-text_black;
   @include font($size: 2.0rem, $height: 5.0rem);
   text-decoration-line: none;
-  margin-left: 35px;
   @extend %transition;
   &:hover {
     color: $color-text_colored;
   }
 }
 
-.social-icons {
+.social__icons {
+  width: 188px;
   display: inline-flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .social__link {
-  margin-left: 20px;
   cursor: pointer;
   width: 32px;
   height: 32px;

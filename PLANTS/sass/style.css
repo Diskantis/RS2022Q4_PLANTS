@@ -413,8 +413,8 @@ section, main, footer, header, article {
   font-family: Inika, Verdana, sans-serif;
 }
 
-.social_icon, .footer__rss, .footer-content a, .navigation__link a, .logo-path, .logo {
-  transition: all 0.3s ease-out;
+.social_icon, .footer__rss, .footer__github, .navigation__link a, .button, .logo-path, .logo {
+  transition: all 0.3s linear;
 }
 
 * {
@@ -479,6 +479,11 @@ h3 {
 .logo-object {
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .logo-object {
+    padding-right: -10px;
+  }
+}
 
 .logo-svg {
   cursor: pointer;
@@ -494,7 +499,6 @@ h3 {
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
-  transition: all 0.3s;
 }
 .button_welcome {
   width: 158px;
@@ -614,6 +618,7 @@ h3 {
 }
 .navigation__link a:hover {
   color: #E06733;
+  font-weight: 700;
 }
 
 .layout-2-column {
@@ -637,15 +642,11 @@ h3 {
 .header {
   background: #EDF2EC;
   padding: 42px 109px 42px 111px;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .header {
     padding: 35px 50px;
-  }
-}
-@media (max-width: 445px) {
-  .header {
-    padding: 36px 15px;
   }
 }
 @media (max-width: 380px) {
@@ -664,21 +665,50 @@ h3 {
   background: #FFFFFF;
   padding: 40px 108px 40px 110px;
 }
+@media (max-width: 768px) {
+  .page-footer {
+    padding: 33px 279px 18px;
+  }
+}
+@media (max-width: 380px) {
+  .page-footer {
+    padding: 22px 85px 7px;
+  }
+}
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+  .footer-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.footer-content {
+.footer__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .footer__content {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.footer__year-git {
+  width: 168px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-content a {
+.footer__github {
   color: #000000;
   font-size: 2rem;
   line-height: 5rem;
@@ -687,39 +717,31 @@ h3 {
   text-decoration-line: none;
   cursor: pointer;
 }
-.footer-content a:hover {
+.footer__github:hover {
   color: #E06733;
 }
 
-.footer__year {
-  margin-left: 20px;
-}
-
-.footer__github {
-  margin-left: 20px;
-}
-
 .footer__rss {
+  white-space: nowrap;
   color: #000000;
   font-size: 2rem;
   line-height: 5rem;
   font-weight: 400;
   font-style: normal;
   text-decoration-line: none;
-  margin-left: 35px;
 }
 .footer__rss:hover {
   color: #E06733;
 }
 
-.social-icons {
+.social__icons {
+  width: 188px;
   display: inline-flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .social__link {
-  margin-left: 20px;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -736,7 +758,16 @@ h3 {
 .page-welcome {
   background: #EDF2EC;
   padding: 62px 109px 62.642px;
-  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .page-welcome {
+    padding: 40px 50px 70px;
+  }
+}
+@media (max-width: 380px) {
+  .page-welcome {
+    padding: 24px 25px;
+  }
 }
 
 .welcome__wrapper {
@@ -783,6 +814,16 @@ h3 {
   padding: 93px 109px 94px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .page-about {
+    padding: 40px 50px 95px;
+  }
+}
+@media (max-width: 380px) {
+  .page-about {
+    padding: 30px 25px;
+  }
+}
 
 .about__wrapper {
   display: flex;
@@ -814,6 +855,16 @@ h3 {
   background: #EDF2EC;
   padding: 40px 109px 68px;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .page-service {
+    padding: 60px 50px 70px;
+  }
+}
+@media (max-width: 380px) {
+  .page-service {
+    padding: 30px 50px 27px 25px;
+  }
 }
 
 .service__wrapper {
@@ -864,6 +915,17 @@ h3 {
 .page-prices {
   background: #FFFFFF;
   padding: 38px 109px 105px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .page-prices {
+    padding: 40px 50px 88px;
+  }
+}
+@media (max-width: 380px) {
+  .page-prices {
+    padding: 25px 76px 40px;
+  }
 }
 
 .prices-column_one {
@@ -915,6 +977,16 @@ h3 {
   background: #EDF2EC;
   padding: 53px 109px 0;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .page-contacts {
+    padding: 40px 159px 0;
+  }
+}
+@media (max-width: 380px) {
+  .page-contacts {
+    padding: 25px 96px 0;
+  }
 }
 
 .contacts__wrapper {

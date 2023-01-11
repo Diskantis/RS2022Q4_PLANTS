@@ -20,10 +20,6 @@
   @media (max-width: $tablet-width) {@content}
 }
 
-@mixin media-small_mobile {
-  @media (max-width: $small_mobile-width) {@content}
-}
-
 @mixin media-mobile {
   @media (max-width: $mobile-width) {@content}
 }

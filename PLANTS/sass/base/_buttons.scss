@@ -2,7 +2,7 @@
   @extend %font-primary;
   @include font ($size: 1.6rem, $height: 2.0rem);
   cursor: pointer;
-  transition: all 0.3s;
+  @extend %transition;
   &_welcome {
     width: 158px;
     height: 44px;

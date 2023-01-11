@@ -1,11 +1,10 @@
 .header {
   background: $color-bg_secondary;
   padding: 42px 109px 42px 111px;
+  overflow: hidden;
+
   @include media-tablet {
     padding: 35px 50px;
-  }
-  @include media-small_mobile {
-    padding: 36px 15px;
   }
 
   @include media-mobile {

@@ -1,13 +1,22 @@
 .page-welcome {
   background: $color-bg_secondary;
   padding: 62px 109px 62.642px;
-  overflow: hidden;
+  //overflow: hidden;
+
+  @include media-tablet {
+    padding: 40px 50px 70px;
+  }
+
+  @include media-mobile {
+    padding: 24px 25px;
+  }
 }
 
 .welcome__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @include media-tablet {
     flex-direction: row-reverse
   }

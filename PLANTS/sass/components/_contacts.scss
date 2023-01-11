@@ -2,6 +2,14 @@
   background: $color-bg_secondary;
   padding: 53px 109px 0;
   overflow: hidden;
+
+  @include media-tablet {
+    padding: 40px 159px 0;
+  }
+
+  @include media-mobile {
+    padding: 25px 96px 0;
+  }
 }
 
 .contacts__wrapper {

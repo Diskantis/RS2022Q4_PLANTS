@@ -1,6 +1,15 @@
 .page-prices {
   background: $color-bg_primary;
   padding: 38px 109px 105px;
+  overflow: hidden;
+
+  @include media-tablet {
+    padding: 40px 50px 88px;
+  }
+
+  @include media-mobile {
+    padding: 25px 76px 40px;
+  }
 }
 
 .prices-column_one {

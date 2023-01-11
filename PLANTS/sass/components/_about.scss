@@ -2,6 +2,14 @@
   background: $color-bg_primary;
   padding: 93px 109px 94px;
   overflow: hidden;
+
+  @include media-tablet {
+    padding: 40px 50px 95px;
+  }
+
+  @include media-mobile {
+    padding: 30px 25px;
+  }
 }
 
 .about__wrapper {
