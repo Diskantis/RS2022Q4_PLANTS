@@ -4,7 +4,7 @@
   overflow: hidden;
 
   @include media-tablet {
-    padding: 60px 50px 70px;
+    padding: 60px 50px 32px;
   }
 
   @include media-mobile {
@@ -13,44 +13,105 @@
 }
 
 .service__wrapper {
-  justify-content: space-between;
-}
-
-.service__content {
   display: flex;
   margin-bottom: 78px;
+
+  @include media-tablet {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
 }
 
 .service__title {
   width: 306px;
   margin-right: 142px;
+
+  @include media-tablet {
+    margin-bottom: 42px;
+  }
 }
 
 .service__buttons {
+  width: 559px;
   display: flex;
   justify-content: space-between;
-  margin-top: 29px;
-  margin-bottom: 25px;
+  align-items: center;
 }
 
-.service-block {
+.service-card {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 450px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-bottom: 53px;
+  margin-bottom: 55px;
+
+  @include media-tablet {
+    margin-bottom: 38px;
+  }
 }
 
-.block__content {
-  text-align: center;
+.card__image {
+  width: 330px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 10px;
+
+  @include media-tablet {
+    width: 280px;
+  }
 }
 
-.block__name {
+.item-1 {
+  background-image: url('../img/services/service-1.png');
+}
+
+.item-2 {
+  background-image: url('../img/services/service-2.png');
+}
+
+.item-3 {
+  background-image: url('../img/services/service-3.png');
+}
+
+.item-4 {
+  background-image: url('../img/services/service-4.png');
+}
+
+.item-5 {
+  background-image: url('../img/services/service-5.png');
+}
+
+.item-6 {
+  background-image: url('../img/services/service-6.png');
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__name {
   color: $color-text_colored;
-  margin: 0 0 13px;
+  margin-bottom: 14px;
+
+  @include media-tablet {
+    margin-bottom: 10px;
+  }
 }
 
-.block__text {
+.card__text {
   color: $color-text_h1_block;
   @extend %font-primary;
   @include font($size: 1.6rem, $height: 2.0rem);
-  margin-bottom: 36px;
+
+  @include media-tablet {
+    width: 203px;
+    text-align: center;
+  }
 }

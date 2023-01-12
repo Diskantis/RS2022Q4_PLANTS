@@ -1,7 +1,7 @@
 .page-welcome {
   background: $color-bg_secondary;
   padding: 62px 109px 62.642px;
-  //overflow: hidden;
+  overflow: hidden;
 
   @include media-tablet {
     padding: 40px 50px 70px;
@@ -18,31 +18,34 @@
   justify-content: space-between;
 
   @include media-tablet {
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
+    align-items: start;
   }
 }
 
 .welcome__image {
-  max-width: 448px;
-  width: 100%
-  //height: 407.36px;
-  //@include media-desktop {
-  //  height: 254.15px;
-  //}
+  width: 448px;
+
+  @include media-tablet {
+    width: 280px;
+  }
 }
 
 .welcome__content{
-  display: block;
   width: 549px;
-  //padding-right: 226px;
-  //@include media-desktop {
-  //  padding-left: 0;
-  //}
-}
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-.welcome__title {
-  margin-top: 34px;
-  margin-bottom: 45px;
+  @include media-desktop {
+    flex-shrink: 0;
+  }
+
+  @include media-tablet {
+    width: 346px;
+    height: 310px;
+  }
 }
 
 .welcome__title span {
@@ -51,9 +54,9 @@
 
 .welcome__text {
   color: $color-text_gray;
-  margin-bottom: 45px;
-}
 
-.button_welcome {
-  margin-bottom: 30px;
+  @include media-tablet {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
 }

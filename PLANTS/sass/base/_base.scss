@@ -12,20 +12,33 @@ body {
   max-width: 1440px;
   margin: auto;
   @extend %font-primary;
-  @include font($size: 2rem, $height: 3.5rem, $weight: 400);
+  @include font($size: 2.0rem, $height: 3.5rem);
+
+  @include media-tablet {
+    @include font($size: 1.6rem, $height: 2.5rem);
+  }
 }
 
 
 h1 {
   color: $color-text_h1_block;
+  margin: 0;
   @extend %font-primary;
   @include font($size: 4.5rem, $height: 5.0rem, $weight: 700);
+
+  @include media-tablet {
+    @include font($size: 3.5rem, $height: 5.0rem, $weight: 700);
+  }
 }
 
 h2 {
   color: $color-text_green;
   @extend %font-secondary;
   @include font($size: 4.0rem, $height: 5.2rem);
+
+  @include media-tablet {
+    @include font($size: 3.5rem, $height: 4.56rem);
+  }
 }
 
 h3 {

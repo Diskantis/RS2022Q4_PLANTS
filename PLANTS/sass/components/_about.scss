@@ -16,16 +16,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-tablet {
+    flex-direction: column;
+    align-content: end;
+    justify-content: right;
+  }
 }
 
-.about__content{
-  display: block;
+.about__content {
   padding-right: 155px;
+
+  @include media-tablet {
+    padding-right: 0;
+  }
 }
 
 .about__title {
   margin-top: 67px;
   margin-bottom: 38px;
+
+  @include media-tablet {
+    text-align: center;
+    margin: 0 122px 50px;
+  }
 }
 
 .about__title span {
@@ -35,5 +49,17 @@
 .about__text {
   color: $color-text_gray;
   line-height: 1.5;
-  margin-bottom: 60px;
+  margin: 0 0 60px;
+
+  @include media-tablet {
+    @include font($size: 2.0rem, $height: 3.0rem);
+    margin-bottom: 70px;
+  }
+}
+
+.about__image {
+
+  @include media-tablet {
+    max-width: 250px;
+  }
 }

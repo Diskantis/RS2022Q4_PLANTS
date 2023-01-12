@@ -13,9 +13,9 @@
 
 .logo-object {
   margin-bottom: 10px;
+
   @include media-tablet {
-    //width: 77px;
-    padding-right: -10px;
+    //margin-bottom: 10;
   }
 }
 

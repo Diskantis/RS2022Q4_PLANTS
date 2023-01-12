@@ -1,5 +1,9 @@
 .header__navigation {
   width: 452px;
+
+  @include media-tablet {
+    height: 47px;
+  }
 }
 
 .navigation {
