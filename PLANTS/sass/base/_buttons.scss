@@ -35,7 +35,6 @@
     @include font ($size: 2.0rem, $height: 2.0rem, $weight: 700);
     width: 250px;
     height: 50px;
-    margin-bottom: 32px;
     border-radius: 20px;
     display: inline-flex;
     justify-content: space-between;
@@ -43,7 +42,11 @@
     background-color: $color-price_btn;
     border: 0.5px solid $color-price_btn;
     color: $color-text_black;
-    padding: 0 40px;
+    padding: 0 40px 0 38px;
+    &:hover {
+      background-color: $color-price_btn-hover;
+      border-color: $color-price_btn-hover;
+    }
   }
   &_city {
     @include font ($size: 2.0rem, $height: 4.0rem);
@@ -61,5 +64,9 @@
     text-align: left;
     padding-left: 20px;
     padding-right: 35px;
+    &:hover {
+      background-color: $color-city_btn-hover;
+      border-color: $color-city_btn-hover;
+    }
   }
 }

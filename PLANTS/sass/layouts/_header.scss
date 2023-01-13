@@ -1,11 +1,6 @@
 .header {
   background: $color-bg_secondary;
   padding: 42px 109px 42px 111px;
-  overflow: hidden;
-
-  @include media-desktop {
-    padding: 42px 50px;
-  }
 
   @include media-tablet {
     padding: 35px 50px;
@@ -17,6 +12,7 @@
 }
 
 .header__wrapper {
+  max-width: 1220px;
   display: flex;
   align-items: center;
   justify-content: space-between;

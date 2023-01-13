@@ -1,7 +1,6 @@
 .page-prices {
   background: $color-bg_primary;
-  padding: 38px 109px 105px;
-  overflow: hidden;
+  padding: 38px 109px 114px;
 
   @include media-tablet {
     padding: 40px 50px 88px;
@@ -12,14 +11,15 @@
   }
 }
 
-.prices-column_one {
-  display: block;
-}
-
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
   @include font($size: 4.0rem, $height: 5.0rem, $weight: 700);
+
+  @include media-tablet {
+    @include font($size: 3.5rem, $height: 4.23rem, $weight: 700);
+    margin-left: 15px;
+  }
 }
 
 .prices__block {
@@ -27,30 +27,57 @@
   height: 282px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-top: 60px;
+  margin-top: 58px;
+
+  @include media-tablet {
+    margin-top: 56px;
+  }
 }
 
 .block__buttons {
-  display: block;
-  margin: 33px 40px 0;
-}
-
-.prices__title span {
-  color: $color-text_green;
+  height: 214px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 34px 41px;
 }
 
 .prices-column_two {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   text-align: right;
 }
 
-.button_pos {
-  display: block;
-  margin: 40px 0 0 auto;
+.prices__contact {
+  color: $color-text_black;
+  @extend %font-primary;
+  @include font($size: 4.0rem, $height: 5.0rem, $weight: 700);
+  margin-bottom: 41px;
+
+  @include media-tablet {
+    @include font($size: 2.5rem, $height: 3.5rem, $weight: 700);
+    margin-top: 100px;
+    margin-bottom: 28px;
+  }
+}
+
+.prices__contact span {
+  color: $color-text_green;
 }
 
 .prices__image {
-  width: 152px;
+  width: 157px;
   height: 175px;
-  margin: 39px 0 0 auto;
+  transform: scale(1);
+  background-image: url("../img/prices/leafs.png");
+  background-repeat: no-repeat;
+  margin-top: 35px;
+  margin-bottom: 5px;
+
+  @include media-tablet {
+    @include font($size: 2.5rem, $height: 3.5rem, $weight: 700);
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
 }

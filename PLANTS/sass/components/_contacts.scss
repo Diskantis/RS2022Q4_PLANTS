@@ -1,7 +1,8 @@
 .page-contacts {
   background: $color-bg_secondary;
-  padding: 53px 109px 0;
-  overflow: hidden;
+  padding: 60px 109px 0;
+
+  //overflow: hidden;
 
   @include media-tablet {
     padding: 40px 159px 0;
@@ -13,21 +14,24 @@
 }
 
 .contacts__wrapper {
-  display: flex;
-  //justify-content: space-between;
+  //display: flex;
+  position: relative;
 }
 
 .contacts__content {
-  text-align: right;
+  text-align: center;
+}
+
+.contacts__image {
+  position: absolute;
+  margin: 0;
 }
 
 .contacts__title {
   @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
-  text-align: left;
-  margin: 7px 0 36px 113px;
-  @include media-desktop {
-    margin: 7px 0 36px 0;
-  }
+  margin-left: 1px;
+  //text-align: left;
+  //margin: 7px 0 36px 113px;
 }
 
 .contacts__button {
