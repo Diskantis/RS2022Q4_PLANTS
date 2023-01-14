@@ -1,8 +1,6 @@
 .page-contacts {
   background: $color-bg_secondary;
-  padding: 60px 109px 0;
-
-  //overflow: hidden;
+  padding: 53px 109px 0;
 
   @include media-tablet {
     padding: 40px 159px 0;
@@ -12,31 +10,38 @@
     padding: 25px 96px 0;
   }
 }
-
-.contacts__wrapper {
-  //display: flex;
+.contacts_wrapper {
   position: relative;
-}
 
-.contacts__content {
-  text-align: center;
-}
+  @include media-tablet {
 
-.contacts__image {
-  position: absolute;
-  margin: 0;
+  }
 }
 
 .contacts__title {
+  position: absolute;
+  right: 42.4%;
+  top: 7px;
   @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
-  margin-left: 1px;
-  //text-align: left;
-  //margin: 7px 0 36px 113px;
+
+  @include media-tablet {
+    display: block;
+  }
 }
 
-.contacts__button {
-  //margin: 0 0 0 372px;
-  //@include media-desktop {
-  //  margin: 0;
-  //}
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__image {
+  width: 400px;
+  height: 497px;
+  background-image: url('../img/contacts/contact_woman.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__accordion-btn {
+  margin-top: 95px;
 }
