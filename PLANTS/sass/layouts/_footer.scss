@@ -17,6 +17,7 @@
   align-items: center;
 
   @include media-tablet {
+    height: 130px;
     flex-direction: column;
   }
 }
@@ -29,6 +30,7 @@
   margin-right: 17px;
 
   @include media-tablet {
+    width: 173px;
     margin-right: 0;
     color: $color-text_black;
     @include font($size: 2.0rem, $height: 2.42rem);
@@ -61,12 +63,13 @@
   }
 
   @include media-tablet {
-    margin-bottom: 13px;
+    //margin-bottom: 13px;
   }
 }
 
 .social__icons {
   width: 188px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,30 +8,29 @@
 
   @include media-mobile {
     padding: 25px 96px 0;
+    overflow: hidden;
   }
 }
 .contacts_wrapper {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @include media-tablet {
+    flex-direction: column;
+    align-items: center;
 
   }
 }
 
 .contacts__title {
-  position: absolute;
-  right: 42.4%;
-  top: 7px;
+  margin-top: 7px;
+  margin-left: 43px;
   @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
 
   @include media-tablet {
-    display: block;
+    margin: 0;
   }
-}
-
-.contacts__content {
-  display: flex;
-  justify-content: space-between;
 }
 
 .contacts__image {
@@ -40,8 +39,21 @@
   background-image: url('../img/contacts/contact_woman.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include media-tablet {
+    order: 3;
+    width: 200px;
+    height: 248.5px;
+    margin-left: 20px;
+    margin-bottom: 0.5px;
+  }
 }
 
 .contacts__accordion-btn {
   margin-top: 95px;
+
+  @include media-tablet {
+    margin-top: 98px;
+    margin-bottom: 250px;
+  }
 }

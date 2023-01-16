@@ -21,4 +21,27 @@
     height: 47px;
   }
 
+  @include media-mobile {
+    height: 26px;
+  }
+}
+
+.header__logo-line  {
+  display: flex;
+
+  @include media-mobile {
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+  }
+}
+
+.header__hamburger {
+
+  @include media-mobile {
+    position: absolute;
+    right: 0;
+    margin-bottom: 7px;
+  }
 }

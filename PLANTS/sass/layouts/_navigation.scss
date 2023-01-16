@@ -4,6 +4,10 @@
   @include media-tablet {
     height: 47px;
   }
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .navigation {
@@ -11,10 +15,6 @@
   justify-content: space-between;
   @extend %font-secondary;
   @include font ($size: 1.6rem, $height: 5.0rem);
-
-  @include media-mobile {
-    display: none;
-  }
 }
 
 .navigation__link a {

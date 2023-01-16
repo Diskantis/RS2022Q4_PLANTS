@@ -8,6 +8,7 @@
 
   @include media-mobile {
     padding: 25px 76px 40px;
+    overflow: hidden;
   }
 }
 
@@ -77,7 +78,7 @@
 
   @include media-tablet {
     @include font($size: 2.5rem, $height: 3.5rem, $weight: 700);
-    margin-top: 30px;
+    margin-top: 29px;
     margin-bottom: 5px;
   }
 }

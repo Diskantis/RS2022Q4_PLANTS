@@ -9,6 +9,10 @@
   &:hover {
     color: $color-text_colored;
   }
+
+  @include media-mobile {
+    @include font ($size: 1.6rem, $height: 2.1rem);
+  }
 }
 
 .logo-object {

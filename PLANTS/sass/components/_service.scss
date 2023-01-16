@@ -8,6 +8,7 @@
 
   @include media-mobile {
     padding: 30px 50px 27px 25px;
+    overflow: hidden;
   }
 }
 
@@ -27,7 +28,6 @@
 
 .service__title {
   max-width: 306px;
-  //margin-right: 141px;
   margin-bottom: 3px;
 
   @include media-tablet {

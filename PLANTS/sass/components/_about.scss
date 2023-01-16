@@ -24,15 +24,8 @@
   }
 }
 
-.about__content {
-  padding-right: 155px;
-
-  @include media-tablet {
-    padding-right: 0;
-  }
-}
-
 .about__title {
+  max-width: 463px;
   margin-top: 67px;
   margin-bottom: 38px;
 
@@ -47,19 +40,23 @@
 }
 
 .about__text {
+  max-width: 605px;
   color: $color-text_gray;
   line-height: 1.5;
   margin: 0 0 60px;
 
   @include media-tablet {
     @include font($size: 2.0rem, $height: 3.0rem);
-    margin-bottom: 70px;
+    max-width: 668px;
+    margin-bottom: 68px;
   }
 }
 
 .about__image {
+  max-width: 464px;
 
   @include media-tablet {
-    max-width: 250px;
+    width: 250px;
+    height: 258px;
   }
 }
