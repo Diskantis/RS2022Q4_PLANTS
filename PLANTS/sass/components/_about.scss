@@ -8,7 +8,7 @@
   }
 
   @include media-mobile {
-    padding: 30px 25px;
+    padding: 30px 25px 31px;
   }
 }
 
@@ -19,8 +19,12 @@
 
   @include media-tablet {
     flex-direction: column;
-    align-content: end;
+    //align-content: end;
     justify-content: right;
+  }
+
+  @include media-mobile {
+    //width: 288px;
   }
 }
 
@@ -33,22 +37,32 @@
     text-align: center;
     margin: 0 122px 50px;
   }
+
+  @include media-mobile {
+    margin: 0 0 12.55px;
+  }
 }
 
 .about__title span {
   color: $color-text_colored;
 }
 
-.about__text {
+.about__content {
   max-width: 605px;
   color: $color-text_gray;
   line-height: 1.5;
   margin: 0 0 60px;
 
   @include media-tablet {
-    @include font($size: 2.0rem, $height: 3.0rem);
     max-width: 668px;
+    @include font($size: 2.0rem, $height: 3.0rem);
     margin-bottom: 68px;
+  }
+
+  @include media-mobile {
+    max-width: 330px;
+    @include font($size: 1.5rem, $height: 2.5rem);
+    margin-bottom: 0.33px;
   }
 }
 
@@ -58,5 +72,10 @@
   @include media-tablet {
     width: 250px;
     height: 258px;
+  }
+
+  @include media-mobile {
+    width: 150px;
+    height: 147px;
   }
 }

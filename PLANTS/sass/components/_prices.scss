@@ -1,6 +1,6 @@
 .page-prices {
   background: $color-bg_primary;
-  padding: 38px 109px 114px;
+  padding: 39px 109px 115px;
 
   @include media-tablet {
     padding: 40px 50px 88px;
@@ -8,18 +8,20 @@
 
   @include media-mobile {
     padding: 25px 76px 40px;
-    overflow: hidden;
   }
 }
 
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
-  @include font($size: 4.0rem, $height: 5.0rem, $weight: 700);
+  @include font($size: 4.0rem, $height: 4.8rem, $weight: 700);
 
   @include media-tablet {
     @include font($size: 3.5rem, $height: 4.23rem, $weight: 700);
     margin-left: 15px;
+  }
+  @include media-mobile {
+
   }
 }
 
@@ -28,10 +30,14 @@
   height: 282px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-top: 58px;
+  margin-top: 60px;
 
   @include media-tablet {
-    margin-top: 56px;
+    margin-top: 57px;
+  }
+
+  @include media-mobile {
+    display: none;
   }
 }
 
@@ -80,5 +86,8 @@
     @include font($size: 2.5rem, $height: 3.5rem, $weight: 700);
     margin-top: 29px;
     margin-bottom: 5px;
+  }
+  @include media-mobile {
+    display: none;
   }
 }

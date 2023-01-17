@@ -8,16 +8,16 @@
 
   @include media-mobile {
     padding: 30px 50px 27px 25px;
-    overflow: hidden;
   }
 }
 
 .service__content {
   max-width: 1007px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 77px;
+  margin-bottom: 35px;
 
   @include media-tablet {
     flex-direction: column;
@@ -28,18 +28,47 @@
 
 .service__title {
   max-width: 306px;
-  margin-bottom: 3px;
+  margin-bottom: 45px;
 
   @include media-tablet {
+    margin-bottom: 42px;
+  }
+
+  @include media-mobile {
+    max-width: 187px;
     margin-bottom: 42px;
   }
 }
 
 .service__buttons {
-  width: 559px;
+  max-width: 559px;
+  gap: 38px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: left;
   align-items: center;
+  margin-bottom: 42px;
+
+  @include media-tablet {
+    justify-content: left;
+    margin-bottom: 0;
+  }
+
+  @include media-mobile {
+    justify-content: left;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+.button-service_media {
+  @include font ($size: 2.0rem, $height: 2.6rem);
+
+  @include media-mobile {
+    width: 121px;
+    height: 35px;
+    @include font ($size: 1.5rem, $height: 2.0rem);
+  }
 }
 
 .service-card {

@@ -7,7 +7,7 @@
   }
 
   @include media-mobile {
-    padding: 36px 25px;
+    padding: 35px 25px;
   }
 }
 
@@ -23,25 +23,16 @@
 
   @include media-mobile {
     height: 26px;
-  }
-}
-
-.header__logo-line  {
-  display: flex;
-
-  @include media-mobile {
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
     position: relative;
   }
 }
 
 .header__hamburger {
+    display: none;
 
   @include media-mobile {
+    display: inline-block;
     position: absolute;
     right: 0;
-    margin-bottom: 7px;
   }
 }
