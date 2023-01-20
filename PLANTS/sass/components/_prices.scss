@@ -7,7 +7,17 @@
   }
 
   @include media-mobile {
-    padding: 25px 76px 40px;
+    padding: 25px 75px 40px;
+  }
+}
+
+.prices-column_one {
+  @include media-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -15,13 +25,19 @@
   color: $color-text_black;
   @extend %font-primary;
   @include font($size: 4.0rem, $height: 4.8rem, $weight: 700);
+  margin-bottom: 60px;
 
   @include media-tablet {
-    @include font($size: 3.5rem, $height: 4.23rem, $weight: 700);
+    @include font($size: 3.5rem, $height: 4.2rem, $weight: 700);
     margin-left: 15px;
+    margin-bottom: 57px;
   }
-  @include media-mobile {
 
+  @include media-mobile {
+    width: 230px;
+    @include font($size: 2.5rem, $height: 3.0rem, $weight: 700);
+    margin-left: 0;
+    margin-bottom: 37px;
   }
 }
 
@@ -30,14 +46,10 @@
   height: 282px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-top: 60px;
-
-  @include media-tablet {
-    margin-top: 57px;
-  }
 
   @include media-mobile {
-    display: none;
+    width: 224px;
+    height: 235px;
   }
 }
 
@@ -47,6 +59,11 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 34px 41px;
+
+  @include media-mobile {
+    height: 177px;
+    margin: 29px 22px;
+  }
 }
 
 .prices-column_two {
@@ -54,6 +71,14 @@
   flex-direction: column;
   align-items: end;
   text-align: right;
+
+  @include media-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .prices__contact {
@@ -66,6 +91,13 @@
     @include font($size: 2.5rem, $height: 3.5rem, $weight: 700);
     margin-top: 100px;
     margin-bottom: 28px;
+  }
+
+  @include media-mobile {
+    @include font($size: 2.0rem, $height: 3.5rem, $weight: 700);
+    width: 230px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 

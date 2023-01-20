@@ -1,13 +1,13 @@
 .page-service {
   background: $color-bg_secondary;
-  padding: 40px 109px 66px;
+  padding: 40px 109px 121px;
 
   @include media-tablet {
-    padding: 60px 50px 32px;
+    padding: 60px 50px 70px;
   }
 
   @include media-mobile {
-    padding: 30px 50px 27px 25px;
+    padding: 30px 25px 27px;
   }
 }
 
@@ -36,7 +36,7 @@
 
   @include media-mobile {
     max-width: 187px;
-    margin-bottom: 42px;
+    margin-bottom: 38px;
   }
 }
 
@@ -56,7 +56,7 @@
 
   @include media-mobile {
     justify-content: left;
-    gap: 10px;
+    gap: 9px;
     flex-wrap: wrap;
   }
 }
@@ -65,8 +65,6 @@
   @include font ($size: 2.0rem, $height: 2.6rem);
 
   @include media-mobile {
-    width: 121px;
-    height: 35px;
     @include font ($size: 1.5rem, $height: 2.0rem);
   }
 }
@@ -78,11 +76,6 @@
   height: 450px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-bottom: 55px;
-
-  @include media-tablet {
-    margin-bottom: 38px;
-  }
 }
 
 .card__image {

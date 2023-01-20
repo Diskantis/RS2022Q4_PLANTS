@@ -1,7 +1,22 @@
 .layout-2-column {
   @include columns ($width: 45%);
+
+  @include media-mobile {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .layout-3-column {
-  @include columns ($width: 27%)
+  @include columns ($width: 27%);
+  gap: 55px;
+
+  @include media-tablet {
+    gap: 38px;
+  }
+
+  @include media-mobile {
+    justify-content: center;
+    gap: 34px;
+  }
 }

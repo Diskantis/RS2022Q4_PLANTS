@@ -1,7 +1,6 @@
 .page-about {
   background: $color-bg_primary;
   padding: 93px 109px 94px;
-  overflow: hidden;
 
   @include media-tablet {
     padding: 40px 50px 95px;
@@ -19,12 +18,7 @@
 
   @include media-tablet {
     flex-direction: column;
-    //align-content: end;
     justify-content: right;
-  }
-
-  @include media-mobile {
-    //width: 288px;
   }
 }
 
@@ -39,7 +33,7 @@
   }
 
   @include media-mobile {
-    margin: 0 0 12.55px;
+    margin: 0 0 13px;
   }
 }
 
@@ -62,7 +56,7 @@
   @include media-mobile {
     max-width: 330px;
     @include font($size: 1.5rem, $height: 2.5rem);
-    margin-bottom: 0.33px;
+    margin-bottom: 4px;
   }
 }
 
@@ -77,5 +71,6 @@
   @include media-mobile {
     width: 150px;
     height: 147px;
+    object-fit: cover;
   }
 }

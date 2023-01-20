@@ -48,6 +48,12 @@
     border: 0.5px solid $color-price_btn;
     color: $color-text_black;
     padding: 0 40px 0 38px;
+    @include media-mobile {
+      width: 180px;
+      height: 50px;
+      @include font ($size: 1.5rem, $height: 2.0rem, $weight: 700);
+      padding: 0 40px 0 30px;
+    }
     &:hover {
       background-color: $color-price_btn-hover;
       border-color: $color-price_btn-hover;
@@ -69,6 +75,11 @@
     text-align: left;
     padding-left: 20px;
     padding-right: 35px;
+    @include media-mobile {
+      width: 300px;
+      height: 50px;
+      padding: 5px 20px;
+    }
     &:hover {
       background-color: $color-city_btn-hover;
       border-color: $color-city_btn-hover;
