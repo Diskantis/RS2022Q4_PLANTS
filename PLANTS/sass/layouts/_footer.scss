@@ -1,15 +1,51 @@
 .page-footer {
   background: $color-bg_primary;
   padding: 40px 108px 40px 110px;
+
+  @include media-tablet {
+    padding: 33px 279px 18px;
+  }
+
+  @include media-mobile {
+    padding: 22px 85px 7px;
+  }
 }
 
-.footer-content {
+.footer-wrapper {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
+
+  @include media-tablet {
+    height: 130px;
+    flex-direction: column;
+  }
+
+  @include media-mobile {
+    height: 117px;
+  }
 }
 
-.footer-content a {
+.footer__year-git {
+  width: 169px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-right: 17px;
+
+  @include media-tablet {
+    width: 173px;
+    margin: 0;
+    color: $color-text_black;
+    @include font($size: 2.0rem, $height: 2.4rem);
+  }
+
+  @include media-mobile {
+    margin-bottom: 12px;
+  }
+}
+
+.footer__github {
   color: $color-text_black;
   @include font($size: 2.0rem, $height: 5.0rem);
   text-decoration-line: none;
@@ -18,30 +54,37 @@
   &:hover {
     color: $color-text_colored;
   }
-}
 
-.footer__year {
-  margin-left: 20px;
-}
-
-.github {
-  margin-left: 20px;
+  @include media-tablet {
+    @include font($size: 2.0rem, $height: 2.4rem);
+    margin-left: 3px;
+  }
 }
 
 .footer__rss {
-  margin-left: 340px;
+  white-space: nowrap;
+  color: $color-text_black;
+  @include font($size: 2.0rem, $height: 5.0rem);
+  text-decoration-line: none;
+  @extend %transition;
+
+  @include media-tablet {
+    @include font($size: 2.0rem, $height: 2.4rem);
+  }
+  &:hover {
+    color: $color-text_colored;
+  }
 }
 
-.social-icons {
-  margin-left: 298px;
-  display: inline-flex;
-  justify-content: center;
+.social__icons {
+  width: 188px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-
 }
 
 .social__link {
-  margin-left: 20px;
   cursor: pointer;
   width: 32px;
   height: 32px;

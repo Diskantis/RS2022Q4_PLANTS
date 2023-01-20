@@ -2,7 +2,7 @@
   @extend %font-primary;
   @include font ($size: 1.6rem, $height: 2.0rem);
   cursor: pointer;
-  transition: all 0.3s;
+  @extend %transition;
   &_welcome {
     width: 158px;
     height: 44px;
@@ -18,14 +18,18 @@
   }
   &_colored {
     @extend %font-secondary;
-    @include font ($size: 2.0rem, $height: 2.6rem);
+    @include font ($size: 2.0rem, $height: 2.6rem, $weight: 700);
     width: 161px;
     height: 50px;
-    margin-right: 38px;
     border-radius: 5px;
     background-color: transparent;
     border: 1px solid $color-text_colored;
     color: $color-text_colored;
+    @include media-mobile {
+      width: 121px;
+      height: 35px;
+      @include font ($size: 1.5rem, $height: 2.0rem, $weight: 700);
+    }
     &:hover {
       background-color: $color-text_colored;
       border-color: $color-text_colored;
@@ -36,7 +40,6 @@
     @include font ($size: 2.0rem, $height: 2.0rem, $weight: 700);
     width: 250px;
     height: 50px;
-    margin-bottom: 32px;
     border-radius: 20px;
     display: inline-flex;
     justify-content: space-between;
@@ -44,7 +47,17 @@
     background-color: $color-price_btn;
     border: 0.5px solid $color-price_btn;
     color: $color-text_black;
-    padding: 0 40px;
+    padding: 0 40px 0 38px;
+    @include media-mobile {
+      width: 180px;
+      height: 50px;
+      @include font ($size: 1.5rem, $height: 2.0rem, $weight: 700);
+      padding: 0 40px 0 30px;
+    }
+    &:hover {
+      background-color: $color-price_btn-hover;
+      border-color: $color-price_btn-hover;
+    }
   }
   &_city {
     @include font ($size: 2.0rem, $height: 4.0rem);
@@ -62,6 +75,14 @@
     text-align: left;
     padding-left: 20px;
     padding-right: 35px;
-    margin-left: 372px;
+    @include media-mobile {
+      width: 300px;
+      height: 50px;
+      padding: 5px 20px;
+    }
+    &:hover {
+      background-color: $color-city_btn-hover;
+      border-color: $color-city_btn-hover;
+    }
   }
 }

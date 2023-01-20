@@ -1,5 +1,23 @@
-.logo-object {
+.logo {
   display: flex;
+  @extend %font-secondary;
+  @include font ($size: 1.6rem, $height: 5.0rem);
+  color: $color-head-nav;
+  text-decoration-line: none;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    color: $color-text_colored;
+  }
+
+  @include media-mobile {
+    align-items: center;
+    @include font ($size: 1.6rem, $height: 2.1rem);
+    margin-top: 5px;
+  }
+}
+
+.logo-object {
   margin-bottom: 10px;
 }
 

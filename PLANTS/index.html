@@ -14,9 +14,8 @@
     <header class="header">
         <div class="wrapper header__wrapper">
             <a href="#" class="logo">
-                <object type="image/svg+xml" data="img/logo.svg" class="logo-object">
-                    Your browser does not support SVG
-                </object>
+                <object type="image/svg+xml" data="img/logo_1.svg" class="logo-object">Your browser does not support SVG</object>
+                <span>Plants</span>
             </a>
             <nav class="header__navigation">
                 <ul class="navigation">
@@ -27,16 +26,22 @@
                     <li class="navigation__link"><a href="#anchor-5">Contacts</a></li>
                 </ul>
             </nav>
+            <span class="header__hamburger hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </div>
     </header>
     <main>
         <section id="anchor-1" class="page-welcome">
             <div class="wrapper welcome__wrapper">
-                <img class="welcome__image" src="./img/welcome/leafs.png" alt="leafs.png">
+                <div class="welcome__image"></div>
                 <div class="welcome__content">
                     <h1 class="welcome__title">We grow <span>plants</span> and give you oxygen</h1>
                     <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                    <button class="button button_welcome">LEARN MORE</button>
+                    <button class="button button_welcome button-welcome_media">LEARN MORE</button>
                 </div>
             </div>
         </section>
@@ -50,58 +55,58 @@
             </div>
         </section>
         <section id="anchor-3" class="page-service">
-            <div class="wrapper service__wrapper">
+            <div class="wrapper">
                 <div class="service__content">
                     <h2 class="service__title">Service and our projects</h2>
                     <div class="service__buttons">
-                        <button class="button button_colored">Gardens</button>
-                        <button class="button button_colored">Lawn</button>
-                        <button class="button button_colored">Planting</button>
+                        <button class="button button_colored button-service_media">Gardens</button>
+                        <button class="button button_colored button-service_media">Lawn</button>
+                        <button class="button button_colored button-service_media">Planting</button>
                     </div>
                 </div>
             </div>
-            <div class="wrapper service__wrapper">
+            <div class="wrapper">
                 <div class="layout-3-column">
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-1.png" alt="service-1.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Garden care</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-1"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Garden care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-2.png" alt="service-2.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Planting</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-2"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-3.png" alt="service-3.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Lawn care</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-3"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Lawn care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-4.png" alt="service-4.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Planting</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-4"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-5.png" alt="service-5.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Garden care</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-5"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Garden care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-block">
-                        <img class="block__image" src="img/services/service-6.png" alt="service-6.png">
-                        <div class="block__content">
-                            <h3 class="block__name">Planting</h3>
-                            <p class="block__text">Lorem Ipsum has been the industry</p>
+                    <div class="service-card">
+                        <div class="card__image item-6"></div>
+                        <div class="card__content">
+                            <h3 class="card__name">Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                 </div>
@@ -120,55 +125,54 @@
                     </div>
                 </div>
                 <div class="prices-column_two">
-                    <span class="prices__title">Our best <span>gardeners</span> are ready to help you</span>
-                    <button class="button button_colored button_pos">Contact us</button>
-                    <img class="prices__image" src="img/prices/leafs.png" alt="leafs.png">
+                    <span class="prices__contact">Our best <span>gardeners</span> are ready to help you</span>
+                    <button class="button button_colored">Contact us</button>
+                    <div class="prices__image"></div>
                 </div>
             </div>
         </section>
         <section id="anchor-5" class="page-contacts">
-            <div class="wrapper">
-                <div class="contacts__content">
-                    <img class="contacts__image" src="img/contacts/contact_woman.png" alt="contact_woman.png">
-                    <div>
-                        <h2 class="contacts__title">Contact us</h2>
-                        <button class="button button_city">City<span class="ico ico_btn-city"></span></button>
-                    </div>
+            <div class="wrapper contacts_wrapper">
+                <h2 class="contacts__title">Contact us</h2>
+                <div class="contacts__accordion-btn">
+                    <button class="button button_city">City<span class="ico ico_btn-city"></span></button>
                 </div>
+                <div class="contacts__image"><span></span></div>
             </div>
         </section>
     </main>
     <footer class="page-footer">
-        <div class="wrapper">
-            <div class="footer-content">
+        <div class="wrapper footer-wrapper">
+            <div class="footer__year-git">
                 <span>©</span>
-                <span class="footer__year">2022</span>
-                <a href="https://github.com/rolling-scopes-school/diskantis-JSFEPRESCHOOL2022Q4" target="_blank"><span class="github">github</span></a>
-                <a href="https://rs.school/js-stage0/" target="_blank"><span class="footer__rss">Rolling Scopes School</span></a>
-                <ul class="social-icons">
-                    <li class="social__link">
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img class="social_icon" src="img/icons/ico-instagram.svg" alt="instagram.svg">
-                        </a>
-                    </li>
-                    <li class="social__link">
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img class="social_icon" src="img/icons/ico-facebook.svg" alt="facebook.svg">
-                        </a>
-                    </li>
-                    <li class="social__link">
-                        <a href="https://twitter.com/" target="_blank">
-                            <img class="social_icon" src="img/icons/ico-twitter.svg" alt="twitter.svg">
-                        </a>
-                    </li>
-                    <li class="social__link">
-                        <a href="https://www.pinterest.com/" target="_blank">
-                            <img class="social_icon" src="img/icons/ico-pinterest.svg" alt="pinterest.svg">
-                        </a>
-                    </li>
-                </ul>
+                <span>2022</span>
+                <a class="footer__github" href="https://github.com/rolling-scopes-school/diskantis-JSFEPRESCHOOL2022Q4" target="_blank"><span>github</span></a>
             </div>
+            <a class="footer__rss" href="https://rs.school/js-stage0/" target="_blank"><span>Rolling Scopes School</span></a>
+            <ul class="social__icons">
+                <li class="social__link">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="social_icon" src="img/icons/ico-instagram.svg" alt="instagram.svg">
+                    </a>
+                </li>
+                <li class="social__link">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="social_icon" src="img/icons/ico-facebook.svg" alt="facebook.svg">
+                    </a>
+                </li>
+                <li class="social__link">
+                    <a href="https://twitter.com/" target="_blank">
+                        <img class="social_icon" src="img/icons/ico-twitter.svg" alt="twitter.svg">
+                    </a>
+                </li>
+                <li class="social__link">
+                    <a href="https://www.pinterest.com/" target="_blank">
+                        <img class="social_icon" src="img/icons/ico-pinterest.svg" alt="pinterest.svg">
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -1,5 +1,18 @@
+.header__navigation {
+  width: 452px;
+
+  @include media-tablet {
+    height: 47px;
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
 .navigation {
   display: flex;
+  justify-content: space-between;
   @extend %font-secondary;
   @include font ($size: 1.6rem, $height: 5.0rem);
 }
@@ -7,10 +20,11 @@
 .navigation__link a {
   color: $color-head-nav;
   text-decoration-line: none;
-  padding-left: 47px;
   cursor: pointer;
   @extend %transition;
   &:hover {
     color: $color-text_colored;
+    font-weight: 700;
   }
+
 }

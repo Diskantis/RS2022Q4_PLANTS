@@ -1,13 +1,82 @@
 .page-contacts {
   background: $color-bg_secondary;
-  padding: 53px 109px 0;
+  padding: 51px 109px 0;
+
+  @include media-tablet {
+    padding: 40px 159px 0;
+  }
+
+  @include media-mobile {
+    padding: 25px 40px 0 37px;
+  }
 }
 
-.contacts__content {
+.contacts_wrapper {
+  min-height: 497px;
   display: flex;
+  flex-direction: column;
+
+  @include media-mobile {
+    min-height: 420px;
+  }
 }
 
 .contacts__title {
+  text-align: center;
   @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
-  margin: 7px 0 36px 113px;
+  margin-top: 7px;
+
+  @include media-tablet {
+    max-width: 450px;
+    @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
+    margin: 0;
+  }
+
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.3rem, $weight: 700);
+  }
+}
+
+.contacts__image {
+  position: absolute;
+  width: 400px;
+  height: 497px;
+  background-image: url('../img/contacts/contact_woman.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-tablet {
+    position: relative;
+    max-width: 200px;
+    height: 248.5px;
+    justify-self: center;
+    left: 10px;
+    margin: auto;
+  }
+
+  @include media-mobile {
+    width: 100px;
+    height: 124.25px;
+    background-position: bottom;
+    left: auto;
+    margin: auto;
+  }
+}
+
+.contacts__accordion-btn {
+  display: flex;
+  justify-content: right;
+  margin-top: 37px;
+
+  @include media-tablet {
+    justify-content: center;
+    margin-top: 99px;
+    margin-bottom: 249px;
+  }
+
+  @include media-mobile {
+    max-width: 300px;
+    margin-top: 80px;
+    margin-bottom: 132px;
+  }
 }

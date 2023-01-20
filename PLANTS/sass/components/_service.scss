@@ -1,47 +1,143 @@
 .page-service {
   background: $color-bg_secondary;
-  padding: 40px 109px 68px;
-}
+  padding: 40px 109px 121px;
 
-.service__wrapper {
-  justify-content: space-between;
+  @include media-tablet {
+    padding: 60px 50px 70px;
+  }
+
+  @include media-mobile {
+    padding: 30px 25px 27px;
+  }
 }
 
 .service__content {
+  max-width: 1007px;
   display: flex;
-  margin-bottom: 78px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+
+  @include media-tablet {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 40px;
+  }
 }
 
 .service__title {
-  width: 306px;
-  margin-right: 142px;
+  max-width: 306px;
+  margin-bottom: 45px;
+
+  @include media-tablet {
+    margin-bottom: 42px;
+  }
+
+  @include media-mobile {
+    max-width: 187px;
+    margin-bottom: 38px;
+  }
 }
 
 .service__buttons {
+  max-width: 559px;
+  gap: 38px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 29px;
-  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 42px;
+
+  @include media-tablet {
+    justify-content: left;
+    margin-bottom: 0;
+  }
+
+  @include media-mobile {
+    justify-content: left;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
 }
 
-.service-block {
+.button-service_media {
+  @include font ($size: 2.0rem, $height: 2.6rem);
+
+  @include media-mobile {
+    @include font ($size: 1.5rem, $height: 2.0rem);
+  }
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 450px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
-  margin-bottom: 53px;
 }
 
-.block__content {
-  text-align: center;
+.card__image {
+  width: 330px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 10px;
+
+  @include media-tablet {
+    width: 280px;
+  }
 }
 
-.block__name {
+.item-1 {
+  background-image: url('../img/services/service-1.png');
+}
+
+.item-2 {
+  background-image: url('../img/services/service-2.png');
+}
+
+.item-3 {
+  background-image: url('../img/services/service-3.png');
+}
+
+.item-4 {
+  background-image: url('../img/services/service-4.png');
+}
+
+.item-5 {
+  background-image: url('../img/services/service-5.png');
+}
+
+.item-6 {
+  background-image: url('../img/services/service-6.png');
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__name {
   color: $color-text_colored;
-  margin: 0 0 13px;
+  margin-bottom: 14px;
+
+  @include media-tablet {
+    margin-bottom: 10px;
+  }
 }
 
-.block__text {
+.card__text {
   color: $color-text_h1_block;
   @extend %font-primary;
   @include font($size: 1.6rem, $height: 2.0rem);
-  margin-bottom: 36px;
+
+  @include media-tablet {
+    width: 203px;
+    text-align: center;
+  }
 }

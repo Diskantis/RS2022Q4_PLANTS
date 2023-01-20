@@ -1,10 +1,38 @@
 .header {
   background: $color-bg_secondary;
   padding: 42px 109px 42px 111px;
+
+  @include media-tablet {
+    padding: 35px 50px;
+  }
+
+  @include media-mobile {
+    padding: 35px 25px;
+  }
 }
 
 .header__wrapper {
+  max-width: 1220px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-tablet {
+    height: 47px;
+  }
+
+  @include media-mobile {
+    height: 26px;
+    position: relative;
+  }
+}
+
+.header__hamburger {
+    display: none;
+
+  @include media-mobile {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
 }
