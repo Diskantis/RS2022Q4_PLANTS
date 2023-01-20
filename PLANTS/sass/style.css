@@ -678,17 +678,27 @@ h3 {
 .hamburger {
   width: 40px;
   height: 24px;
-  position: relative;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  display: none;
+  z-index: 2;
+}
+@media (max-width: 380px) {
+  .hamburger {
+    display: block;
+    right: 0;
+  }
 }
 
 .hamburger span {
   width: 40px;
   height: 2px;
   position: absolute;
-  top: 7px;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #222222;
+  background: #717171;
   transition: all 0.5s;
 }
 
@@ -709,33 +719,56 @@ h3 {
   margin: auto;
 }
 
-.header__navigation {
-  width: 452px;
-}
-@media (max-width: 768px) {
-  .header__navigation {
-    height: 47px;
-  }
-}
-@media (max-width: 380px) {
-  .header__navigation {
-    display: none;
-  }
-}
-
 .navigation {
+  width: 452px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.6rem;
   line-height: 5rem;
   font-weight: 400;
   font-style: normal;
+}
+.navigation_menu {
+  width: 200px;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #499A18;
+  position: relative;
+  top: 100px;
+  right: -15px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .navigation {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 380px) {
+  .navigation {
+    display: none;
+  }
+}
+
+.active .navigation_menu {
+  right: -300px;
+}
+
+.navigation__link {
+  height: 30px;
 }
 
 .navigation__link a {
   color: #010201;
   text-decoration-line: none;
   cursor: pointer;
+}
+@media (max-width: 380px) {
+  .navigation__link a {
+    height: 20px;
+  }
 }
 .navigation__link a:hover {
   color: #E06733;
@@ -789,7 +822,7 @@ h3 {
 }
 @media (max-width: 380px) {
   .header {
-    padding: 35px 25px;
+    padding: 36px 25px;
   }
 }
 
@@ -806,19 +839,8 @@ h3 {
 }
 @media (max-width: 380px) {
   .header__wrapper {
-    height: 26px;
+    height: 24px;
     position: relative;
-  }
-}
-
-.header__hamburger {
-  display: none;
-}
-@media (max-width: 380px) {
-  .header__hamburger {
-    display: inline-block;
-    position: absolute;
-    right: 0;
   }
 }
 

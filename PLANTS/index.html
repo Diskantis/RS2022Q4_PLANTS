@@ -10,28 +10,30 @@
     <link rel="icon" href="img/favicon/favicon_plants.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="sass/style.css">
 </head>
-<body>
+<body class="">
     <header class="header">
         <div class="wrapper header__wrapper">
             <a href="#" class="logo">
                 <object type="image/svg+xml" data="img/logo_1.svg" class="logo-object">Your browser does not support SVG</object>
                 <span>Plants</span>
             </a>
-            <nav class="header__navigation">
-                <ul class="navigation">
-                    <li class="navigation__link"><a href="#anchor-1">Home</a></li>
-                    <li class="navigation__link"><a href="#anchor-2">About us</a></li>
-                    <li class="navigation__link"><a href="#anchor-3">Service</a></li>
-                    <li class="navigation__link"><a href="#anchor-4">Price</a></li>
-                    <li class="navigation__link"><a href="#anchor-5">Contacts</a></li>
-                </ul>
-            </nav>
-            <span class="header__hamburger hamburger">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-            </span>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__link"><a href="#anchor-1">Home</a></li>
+                        <li class="navigation__link"><a href="#anchor-2">About us</a></li>
+                        <li class="navigation__link"><a href="#anchor-3">Service</a></li>
+                        <li class="navigation__link"><a href="#anchor-4">Price</a></li>
+                        <li class="navigation__link"><a href="#anchor-5">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -173,6 +175,7 @@
             </ul>
         </div>
     </footer>
+    <script src="./script.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

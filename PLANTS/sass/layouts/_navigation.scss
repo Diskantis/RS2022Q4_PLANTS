@@ -1,8 +1,25 @@
-.header__navigation {
+.navigation {
   width: 452px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %font-secondary;
+  @include font ($size: 1.6rem, $height: 5.0rem);
+  &_menu {
+    width: 200px;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #499A18;
+    position: relative;
+    top: 100px;
+    right: -15px;
+    padding: 10px;
+  }
 
   @include media-tablet {
-    height: 47px;
+    margin-top: 5px;
   }
 
   @include media-mobile {
@@ -10,11 +27,14 @@
   }
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  @extend %font-secondary;
-  @include font ($size: 1.6rem, $height: 5.0rem);
+.active {
+  .navigation_menu {
+    right: -300px;
+  }
+}
+
+.navigation__link {
+  height: 30px;
 }
 
 .navigation__link a {
@@ -22,6 +42,10 @@
   text-decoration-line: none;
   cursor: pointer;
   @extend %transition;
+
+  @include media-mobile {
+    height: 20px;
+  }
   &:hover {
     color: $color-text_colored;
     font-weight: 700;
