@@ -5,12 +5,16 @@
   border: transparent;
   position: absolute;
   display: none;
-  z-index: 2;
+  z-index: 0;
 
   @include media-mobile {
     display: block;
     right: 0;
   }
+}
+
+.hamburger.active {
+  z-index: 2;
 }
 
 .hamburger span {
@@ -21,7 +25,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: $color-text_h1_block;
-  transition: all 0.5s;
 }
 
 .hamburger span:nth-of-type(2) {
@@ -42,12 +45,14 @@
 }
 .hamburger.active span:nth-of-type(2) {
   top: 50%;
+  width: 20px;
   background: $color-text_colored;
-  transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-30%, 0%) rotate(45deg);
 }
 .hamburger.active span:nth-of-type(4) {
   top: 50%;
+  width: 20px;
   background: $color-text_colored;
-  transform: translate(-50%, 0%) rotate(-45deg);
+  transform: translate(-30%, 0%) rotate(-45deg);
 }
 

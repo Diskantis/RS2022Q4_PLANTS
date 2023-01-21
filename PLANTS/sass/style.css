@@ -523,19 +523,19 @@ h3 {
 .logo:hover {
   color: #E06733;
 }
-@media (max-width: 380px) {
-  .logo {
-    align-items: center;
-    font-size: 1.6rem;
-    line-height: 2.1rem;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 5px;
-  }
-}
 
 .logo-object {
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .logo-object {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 380px) {
+  .logo-object {
+    margin-bottom: 3px;
+  }
 }
 
 .logo-svg {
@@ -682,13 +682,17 @@ h3 {
   border: transparent;
   position: absolute;
   display: none;
-  z-index: 2;
+  z-index: 0;
 }
 @media (max-width: 380px) {
   .hamburger {
     display: block;
     right: 0;
   }
+}
+
+.hamburger.active {
+  z-index: 2;
 }
 
 .hamburger span {
@@ -699,7 +703,6 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #717171;
-  transition: all 0.5s;
 }
 
 .hamburger span:nth-of-type(2) {
@@ -724,14 +727,16 @@ h3 {
 
 .hamburger.active span:nth-of-type(2) {
   top: 50%;
+  width: 20px;
   background: #E06733;
-  transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-30%, 0%) rotate(45deg);
 }
 
 .hamburger.active span:nth-of-type(4) {
   top: 50%;
+  width: 20px;
   background: #E06733;
-  transform: translate(-50%, 0%) rotate(-45deg);
+  transform: translate(-30%, 0%) rotate(-45deg);
 }
 
 .wrapper {
@@ -743,6 +748,7 @@ h3 {
   width: 452px;
   display: flex;
   justify-content: space-between;
+  flex-grow: 2;
   align-items: center;
   font-size: 1.6rem;
   line-height: 5rem;
@@ -756,12 +762,9 @@ h3 {
 }
 @media (max-width: 380px) {
   .navigation {
+    width: 85px;
     display: none;
   }
-}
-
-.navigation__link {
-  height: 30px;
 }
 
 .navigation__link a {
@@ -849,27 +852,48 @@ h3 {
 }
 
 .menu {
-  position: relative;
-  width: 200px;
-  height: 180px;
-  border: 1px solid #E06733;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background: #EDF2EC;
-  top: 55px;
-  right: -15px;
-  transform: translateX(110%);
-  transition: transform 0.5s;
-}
-.menu .navigation {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-left: 10px;
+}
+@media (max-width: 380px) {
+  .menu {
+    position: relative;
+    justify-content: left;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #E06733;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: #EDF2EC;
+    top: 62px;
+    right: -10px;
+    transform: translateY(-120%);
+    transition: transform 0.5s;
+    z-index: 1;
+  }
+  .menu .navigation {
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 10px;
+  }
+  .menu .navigation__link {
+    height: 30px;
+  }
+  .menu .menu__image {
+    position: absolute;
+    width: 157px;
+    height: 175px;
+    transform: scale(0.5) rotateY(180deg);
+    background-image: url("../img/prices/leafs.png");
+    background-repeat: no-repeat;
+    top: 30px;
+    left: 48px;
+  }
 }
 
 .menu.active {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .page-footer {
