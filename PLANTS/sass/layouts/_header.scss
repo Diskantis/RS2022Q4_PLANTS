@@ -7,7 +7,7 @@
   }
 
   @include media-mobile {
-    padding: 35px 25px;
+    padding: 36px 25px;
   }
 }
 
@@ -22,17 +22,31 @@
   }
 
   @include media-mobile {
-    height: 26px;
+    height: 24px;
     position: relative;
   }
 }
 
-.header__hamburger {
-    display: none;
-
-  @include media-mobile {
-    display: inline-block;
-    position: absolute;
-    right: 0;
+.menu {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border: 1px solid $color-text_colored;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: $color-bg_secondary;
+  top: 55px;
+  right: -15px;
+  transform: translateX(110%);
+  transition: transform 0.5s;
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 10px;
   }
+}
+
+.menu.active {
+    transform: translateX(0);
 }

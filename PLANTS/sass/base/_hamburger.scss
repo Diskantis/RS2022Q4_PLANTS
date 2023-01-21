@@ -1,17 +1,26 @@
 .hamburger {
   width: 40px;
   height: 24px;
-  position: relative;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  display: none;
+  z-index: 2;
+
+  @include media-mobile {
+    display: block;
+    right: 0;
+  }
 }
 
 .hamburger span {
   width: 40px;
   height: 2px;
   position: absolute;
-  top: 7px;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #222222;
+  background: $color-text_h1_block;
   transition: all 0.5s;
 }
 
@@ -25,4 +34,20 @@
   top: calc(50% + 11px);
 }
 
+.hamburger.active span:nth-of-type(1) {
+  display: none;
+}
+.hamburger.active span:nth-of-type(3) {
+  display: none;
+}
+.hamburger.active span:nth-of-type(2) {
+  top: 50%;
+  background: $color-text_colored;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.hamburger.active span:nth-of-type(4) {
+  top: 50%;
+  background: $color-text_colored;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
 
