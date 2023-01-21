@@ -4,19 +4,7 @@
   justify-content: space-between;
   align-items: center;
   @extend %font-secondary;
-  @include font ($size: 1.6rem, $height: 5.0rem);
-  &_menu {
-    width: 200px;
-    flex-direction: column;
-    align-items: start;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: #499A18;
-    position: relative;
-    top: 100px;
-    right: -15px;
-    padding: 10px;
-  }
+  @include font($size: 1.6rem, $height: 5.0rem);
 
   @include media-tablet {
     margin-top: 5px;
@@ -24,12 +12,6 @@
 
   @include media-mobile {
     display: none;
-  }
-}
-
-.active {
-  .navigation_menu {
-    right: -300px;
   }
 }
 
