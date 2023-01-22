@@ -1,6 +1,7 @@
 .page-footer {
   background: $color-bg_primary;
   padding: 40px 108px 40px 110px;
+  display: none;
 
   @include media-tablet {
     padding: 33px 279px 18px;
@@ -8,6 +9,7 @@
 
   @include media-mobile {
     padding: 22px 85px 7px;
+
   }
 }
 
@@ -17,8 +19,9 @@
   align-items: center;
 
   @include media-tablet {
-    height: 130px;
     flex-direction: column;
+    max-width: 330px;
+    height: 130px;
   }
 
   @include media-mobile {

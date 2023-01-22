@@ -8,11 +8,11 @@
   @include font($size: 1.6rem, $height: 5.0rem);
 
   @include media-tablet {
+    max-width: 452px;
     margin-top: 5px;
   }
 
   @include media-mobile {
-
     width: 85px;
     display: none;
   }

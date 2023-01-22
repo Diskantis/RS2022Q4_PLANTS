@@ -30,46 +30,48 @@
 
 .menu {
   display: flex;
+  //max-width: 452px;
 
   @include media-mobile {
-      position: relative;
-      justify-content: left;
-      width: 180px;
-      height: 180px;
-      border: 1px solid $color-text_colored;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-      background: $color-bg_secondary;
-      top: 62px;
-      right: -10px;
-      transform: translateY(-120%);
-      transition: transform 0.5s;
-      z-index: 1;
+    position: relative;
+    justify-content: left;
+    width: 180px;
+    height: 180px;
+    border: 1px solid $color-text_colored;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: $color-bg_secondary;
+    top: 62px;
+    right: -10px;
+    transform: translateY(-120%);
+    transition: transform 0.5s;
+    z-index: 1;
+    overflow: hidden;
 
-      .navigation {
-        width: 85px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        padding-left: 10px;
-      }
+    .navigation {
+      width: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding-left: 10px;
+    }
 
-      .navigation__link {
-        height: 30px;
-      }
+    .navigation__link {
+      height: 30px;
+    }
 
-      .menu__image {
-        position: absolute;
-        width: 157px;
-        height: 175px;
-        transform: scale(0.5) rotateY(180deg);
-        background-image: url("../img/prices/leafs.png");
-        background-repeat: no-repeat;
-        top: 30px;
-        left: 48px;
-      }
+    .menu__image {
+      position: absolute;
+      width: 157px;
+      height: 175px;
+      transform: scale(0.5) rotateY(180deg);
+      background-image: url("../img/prices/leafs.png");
+      background-repeat: no-repeat;
+      top: 30px;
+      left: 48px;
     }
   }
+}
 
 .menu.active {
   transform: translateY(0);

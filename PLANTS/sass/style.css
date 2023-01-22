@@ -757,6 +757,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .navigation {
+    max-width: 452px;
     margin-top: 5px;
   }
 }
@@ -869,9 +870,10 @@ h3 {
     transform: translateY(-120%);
     transition: transform 0.5s;
     z-index: 1;
+    overflow: hidden;
   }
   .menu .navigation {
-    width: 85px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -899,6 +901,7 @@ h3 {
 .page-footer {
   background: #FFFFFF;
   padding: 40px 108px 40px 110px;
+  display: none;
 }
 @media (max-width: 768px) {
   .page-footer {
@@ -918,8 +921,9 @@ h3 {
 }
 @media (max-width: 768px) {
   .footer-wrapper {
-    height: 130px;
     flex-direction: column;
+    max-width: 330px;
+    height: 130px;
   }
 }
 @media (max-width: 380px) {
