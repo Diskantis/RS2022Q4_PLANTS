@@ -1,8 +1,9 @@
 .navigation {
   width: 452px;
+  max-width: 452px;
+  min-width: 265px;
   display: flex;
   justify-content: space-between;
-  flex-grow: 2;
   align-items: center;
   @extend %font-secondary;
   @include font($size: 1.6rem, $height: 5.0rem);
@@ -12,7 +13,6 @@
   }
 
   @include media-mobile {
-
     width: 85px;
     display: none;
   }
@@ -31,5 +31,4 @@
     color: $color-text_colored;
     font-weight: 700;
   }
-
 }

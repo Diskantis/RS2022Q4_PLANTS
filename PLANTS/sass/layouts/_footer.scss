@@ -3,7 +3,7 @@
   padding: 40px 108px 40px 110px;
 
   @include media-tablet {
-    padding: 33px 279px 18px;
+    padding: 33px 50px 18px;
   }
 
   @include media-mobile {
@@ -12,13 +12,15 @@
 }
 
 .footer-wrapper {
+  max-width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   @include media-tablet {
-    height: 130px;
     flex-direction: column;
+    width: 330px;
+    height: 130px;
   }
 
   @include media-mobile {

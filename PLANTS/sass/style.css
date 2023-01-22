@@ -746,9 +746,10 @@ h3 {
 
 .navigation {
   width: 452px;
+  max-width: 452px;
+  min-width: 265px;
   display: flex;
   justify-content: space-between;
-  flex-grow: 2;
   align-items: center;
   font-size: 1.6rem;
   line-height: 5rem;
@@ -841,6 +842,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .header__wrapper {
+    width: 100%;
     height: 47px;
   }
 }
@@ -852,7 +854,9 @@ h3 {
 }
 
 .menu {
+  width: 80%;
   display: flex;
+  justify-content: right;
 }
 @media (max-width: 380px) {
   .menu {
@@ -869,9 +873,11 @@ h3 {
     transform: translateY(-120%);
     transition: transform 0.5s;
     z-index: 1;
+    overflow: hidden;
   }
   .menu .navigation {
-    width: 85px;
+    width: 90px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -902,7 +908,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .page-footer {
-    padding: 33px 279px 18px;
+    padding: 33px 50px 18px;
   }
 }
 @media (max-width: 380px) {
@@ -912,14 +918,16 @@ h3 {
 }
 
 .footer-wrapper {
+  max-width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .footer-wrapper {
-    height: 130px;
     flex-direction: column;
+    width: 330px;
+    height: 130px;
   }
 }
 @media (max-width: 380px) {
@@ -1134,6 +1142,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .about__wrapper {
@@ -1533,7 +1542,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .page-contacts {
-    padding: 40px 159px 0;
+    padding: 40px 50px 0;
   }
 }
 @media (max-width: 380px) {
@@ -1564,11 +1573,12 @@ h3 {
 @media (max-width: 768px) {
   .contacts__title {
     max-width: 450px;
+    display: flex;
+    margin: auto;
     font-size: 4rem;
     line-height: 5.2rem;
     font-weight: 700;
     font-style: normal;
-    margin: 0;
   }
 }
 @media (max-width: 380px) {
@@ -1593,7 +1603,6 @@ h3 {
     position: relative;
     max-width: 200px;
     height: 248.5px;
-    justify-self: center;
     left: 10px;
     margin: auto;
   }
