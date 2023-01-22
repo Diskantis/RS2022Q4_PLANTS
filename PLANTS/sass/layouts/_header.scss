@@ -19,6 +19,7 @@
 
 
   @include media-tablet {
+    width: 100%;
     height: 47px;
   }
 
@@ -29,8 +30,9 @@
 }
 
 .menu {
+  width: 80%;
   display: flex;
-  //max-width: 452px;
+  justify-content: right;
 
   @include media-mobile {
     position: relative;
@@ -50,6 +52,7 @@
 
     .navigation {
       width: 90px;
+      height: 150px;
       display: flex;
       flex-direction: column;
       align-items: start;

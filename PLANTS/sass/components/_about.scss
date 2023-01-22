@@ -2,6 +2,7 @@
   background: $color-bg_primary;
   padding: 93px 109px 94px;
 
+
   @include media-tablet {
     padding: 40px 50px 95px;
   }
@@ -15,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 
   @include media-tablet {
     flex-direction: column;

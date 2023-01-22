@@ -3,7 +3,7 @@
   padding: 51px 109px 0;
 
   @include media-tablet {
-    padding: 40px 159px 0;
+    padding: 40px 50px 0;
   }
 
   @include media-mobile {
@@ -28,8 +28,9 @@
 
   @include media-tablet {
     max-width: 450px;
+    display: flex;
+    margin: auto;
     @include font($size: 4.0rem, $height: 5.2rem, $weight: 700);
-    margin: 0;
   }
 
   @include media-mobile {
@@ -49,7 +50,6 @@
     position: relative;
     max-width: 200px;
     height: 248.5px;
-    justify-self: center;
     left: 10px;
     margin: auto;
   }
