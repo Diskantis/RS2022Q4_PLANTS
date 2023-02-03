@@ -105,6 +105,15 @@
   color: $color-text_green;
 }
 
+.contact__link {
+  color: $color-text_colored;
+  text-decoration-line: none;
+  @extend %transition;
+  &:hover {
+    color: $color-bg_primary;
+  }
+}
+
 .prices__image {
   width: 157px;
   height: 175px;

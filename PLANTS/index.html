@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="sass/style.css">
 </head>
 <body class="">
+    <!--header-->
     <header class="header">
         <div class="wrapper header__wrapper">
             <a href="#" class="logo">
@@ -35,6 +36,7 @@
         </div>
     </header>
     <main>
+        <!--section welcome-->
         <section id="anchor-1" class="page-welcome">
             <div class="wrapper welcome__wrapper">
                 <div class="welcome__image"></div>
@@ -45,6 +47,7 @@
                 </div>
             </div>
         </section>
+        <!--section about-->
         <section id="anchor-2" class="page-about">
             <div class="wrapper about__wrapper">
                 <div class="about__content">
@@ -54,55 +57,56 @@
                 <img class="about__image" src="./img/about/houseplant.png" alt="houseplant.png">
             </div>
         </section>
+        <!--section service-->
         <section id="anchor-3" class="page-service">
             <div class="wrapper">
                 <div class="service__content">
                     <h2 class="service__title">Service and our projects</h2>
                     <div class="service__buttons">
-                        <button class="button button_colored button-service_media">Gardens</button>
-                        <button class="button button_colored button-service_media">Lawn</button>
-                        <button class="button button_colored button-service_media">Planting</button>
+                        <button class="button button_colored button-service_media" data-group="gardens">Gardens</button>
+                        <button class="button button_colored button-service_media" data-group="lawn">Lawn</button>
+                        <button class="button button_colored button-service_media" data-group="planting">Planting</button>
                     </div>
                 </div>
             </div>
             <div class="wrapper">
-                <div class="layout-3-column">
-                    <div class="service-card">
+                <div class="layout-3-column service-cards">
+                    <div class="service-card" data-group="gardens">
                         <div class="card__image item-1"></div>
                         <div class="card__content">
                             <h3 class="card__name">Garden care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" data-group="planting">
                         <div class="card__image item-2"></div>
                         <div class="card__content">
                             <h3 class="card__name">Planting</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" data-group="lawn">
                         <div class="card__image item-3"></div>
                         <div class="card__content">
                             <h3 class="card__name">Lawn care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" data-group="planting">
                         <div class="card__image item-4"></div>
                         <div class="card__content">
                             <h3 class="card__name">Planting</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" data-group="gardens">
                         <div class="card__image item-5"></div>
                         <div class="card__content">
                             <h3 class="card__name">Garden care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" data-group="planting">
                         <div class="card__image item-6"></div>
                         <div class="card__content">
                             <h3 class="card__name">Planting</h3>
@@ -112,6 +116,7 @@
                 </div>
             </div>
         </section>
+        <!--section prices-->
         <section id="anchor-4" class="page-prices">
             <div class="wrapper layout-2-column">
                 <div class="prices-column_one">
@@ -119,6 +124,7 @@
                     <div class="prices__block">
                         <div class="block__buttons">
                             <button class="button button_price">Basics<span class="ico ico_btn-price"></span></button>
+
                             <button class="button button_price">Standard<span class="ico ico_btn-price"></span></button>
                             <button class="button button_price">Pro care<span class="ico ico_btn-price"></span></button>
                         </div>
@@ -126,21 +132,32 @@
                 </div>
                 <div class="prices-column_two">
                     <span class="prices__contact">Our best <span>gardeners</span> are ready to help you</span>
-                    <button class="button button_colored">Contact us</button>
+                    <a class="contact__link" href="#anchor-5"><button class="button button_colored">Contact us</button></a>
                     <div class="prices__image"></div>
                 </div>
             </div>
         </section>
+        <!--section contacts-->
         <section id="anchor-5" class="page-contacts">
             <div class="wrapper contacts_wrapper">
                 <h2 class="contacts__title">Contact us</h2>
                 <div class="contacts__accordion-btn">
-                    <button class="button button_city">City<span class="ico ico_btn-city"></span></button>
+                    <div class="contacts__city-inner">City<span class="ico ico_btn-city"></span></div>
+                    <div class="contacts__custom-select">
+<!--                        <div class="custom-select__value-selected has-value">Yonkers, NY</div>-->
+                        <ul class="custom-select__city-list">
+                            <li class="custom-select__city-address">Canandaigua, NY</li>
+                            <li class="custom-select__city-address">New York City</li>
+                            <li class="custom-select__city-address">Yonkers, NY</li>
+                            <li class="custom-select__city-address">Sherrill, NY</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="contacts__image"><span></span></div>
+            <div class="contacts__image"><span></span></div>
             </div>
         </section>
     </main>
+    <!--footer-->
     <footer class="page-footer">
         <div class="wrapper footer-wrapper">
             <div class="footer__year-git">
@@ -174,7 +191,6 @@
             </ul>
         </div>
     </footer>
-    <script src="./script.js"></script>
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -69,6 +69,12 @@
   }
 }
 
+.button-service_media.select{
+  background-color: $color-text_colored;
+  border-color: $color-text_colored;
+  color: $color-bg_primary;
+}
+
 .service-card {
   display: flex;
   flex-direction: column;
@@ -76,6 +82,10 @@
   height: 450px;
   border: 1px solid $color-block_border;
   border-radius: 20px;
+}
+
+.service-card.blur {
+  filter: blur(2px);
 }
 
 .card__image {

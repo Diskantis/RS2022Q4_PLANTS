@@ -12,14 +12,14 @@
 }
 
 .footer-wrapper {
-  max-width: 100%;
+  max-width: 1222px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @include media-tablet {
     flex-direction: column;
-    width: 330px;
+    width: 210px;
     height: 130px;
   }
 
