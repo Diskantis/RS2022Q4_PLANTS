@@ -16,23 +16,22 @@ window.onload = function () {
   addServiceBtnClickHandler();
 }
 
-
-//SERVICE BUTTON
-
 const elements = {
 activeServiceButtonCounter: 0,
 serviceCards: document.querySelectorAll('.service-card')
 }
 
-
+//SERVICE BUTTON
 
 const addServiceBtnClickHandler = () => {
   document.querySelector('.service__buttons').addEventListener('click', (e) => {
     if (e.target.classList.contains('button-service_media')) {
       let clickedButton = e.target;
-      console.log(elements.activeServiceButtonCounter)
       if (elements.activeServiceButtonCounter < 2){
-        addSelectClickedButton(clickedButton);
+        if (elements.activeServiceButtonCounter === 0) {
+          addServiceCardBlur();
+        }
+        addSelectClickedButton(clickedButton)
       } else {
         removeSelectClickedButton(clickedButton);
       }
@@ -41,21 +40,23 @@ const addServiceBtnClickHandler = () => {
 }
 
 const addSelectClickedButton = (clickedButton) => {
-  if(clickedButton.classList.toggle('select')){
-    clickedButton.classList.toggle('select')
+  if (!clickedButton.classList.contains('select')) {
+    clickedButton.classList.add('select')
     elements.activeServiceButtonCounter += 1;
-    console.log(elements.activeServiceButtonCounter)
-    // removeServiceCardBlur(clickedButton.dataset.group)
-
+    removeServiceCardBlur(clickedButton.dataset.group)
+  } else {
+    removeSelectClickedButton(clickedButton);
   }
 }
 
 const removeSelectClickedButton = (clickedButton) => {
-  if (clickedButton.classList.contains('select')) {
-    clickedButton.classList.toggle('select')
+  if (clickedButton.classList.contains('select')){
+    clickedButton.classList.remove('select')
     elements.activeServiceButtonCounter -= 1;
-    console.log(elements.activeServiceButtonCounter)
-    // addServiceCardBlur(clickedButton.dataset.group)
+    addServiceCardBlur(clickedButton.dataset.group)
+    if (elements.activeServiceButtonCounter === 0) {
+      removeServiceCardBlur();
+    }
   }
 }
 
