@@ -1,27 +1,75 @@
-console.log("\n" +
-    "    Вёрстка соответствует макету. Ширина экрана 768px +24\n" +
-    "    Вёрстка соответствует макету. Ширина экрана 380px +24\n" +
-    "\n" +
-    "    Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки.\n" +
-    "    Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n" +
-    "\n" +
-    "    На ширине экрана 380рх и меньше реализовано адаптивное меню +22\n" +
-    "\n" +
-    "    ИТОГОВАЯ ОЦЕНКА: 85 баллов.")
+
+console.log(`1. При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50
+
+    При выборе одной услуги (нажатии одной кнопки), остальные карточки услуг принимают эффект blur, выбранная услуга остается неизменной + 20
+    Пользователь может нажать одновременно две кнопки услуги, тогда эта кнопка тоже принимает стиль активной и карточки с именем услуги
+      выходят из эффекта blur. При этом пользователь не может нажать одновременно все три кнопки услуг. При повторном нажатии на активную
+      кнопку она деактивируется (становится неактивной) а привязанные к ней позиции возвращаются в исходное состояние (входит в состяние blur
+      если есть еще активная кнопка или же перестають быть в блюре если это была единственная нажатая кнопка). +20
+    Анимации плавного перемещения кнопок в активное состояние и карточек услуг в эффект blur +10
+
+2. Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50
+
+    При нажатии на dropdown кнопку появляется описание тарифов цен в соответствии с макетом. Внутри реализована кнопка order, которая ведет на
+      секцию contacts, при нажатии на нее Accordion все еще остается открытым. +25
+    Пользователь может самостоятельно закрыть содержимое нажав на кнопку dropup, но не может одновременно открыть все тарифы услуг, при открытии
+      нового тарифа предыдущее автоматически закрывается. +25
+
+3. В разделе contacts реализован select с выбором городов -25
+
+    В зависимости от выбора пользователя появляется блок с адресом и телефоном офиса в определенном городе -15
+    При нажатии на кнопку Call us реализован вызов по номеру, который соответствует выбранному городу -10
+
+ИТОГОВАЯ ОЦЕНКА: 100/100 баллов.
+`)
 
 window.onload = function () {
   console.log('Hello Rolling Scopes!')
 
-  //SERVICE BUTTON
+  // HAMBURGER & MENU
+  addHamburgerClickHandler();
+  // SERVICE BUTTON
   addServiceBtnClickHandler();
+  // PRICE BUTTON
+  addPriceBtnClickHandler();
 }
 
 const elements = {
-activeServiceButtonCounter: 0,
-serviceCards: document.querySelectorAll('.service-card')
+  hamburger: document.querySelector('.hamburger'),
+  menu: document.querySelector('.menu'),
+  activeServiceButtonCounter: 0,
+  activePriceButtonCounter: 0,
+  serviceCards: document.querySelectorAll('.service-card')
 }
 
-//SERVICE BUTTON
+
+// HAMBURGER & MENU
+
+const addHamburgerClickHandler = () => {
+  elements.hamburger.addEventListener('click', e => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener('click', e => {
+    let target = e.target;
+    let its_hamburger = target === elements.hamburger;
+    let menu_is_active = elements.menu.classList.contains('active');
+
+    if (!its_hamburger && menu_is_active) {
+      e.stopPropagation();
+      toggleMenu();
+    }
+  })
+}
+
+const toggleMenu = () => {
+  elements.hamburger.classList.toggle('active');
+  elements.menu.classList.toggle('active');
+}
+
+
+// SERVICE BUTTON
 
 const addServiceBtnClickHandler = () => {
   document.querySelector('.service__buttons').addEventListener('click', (e) => {
@@ -77,46 +125,56 @@ const removeServiceCardBlur = (group) => {
 }
 
 
-// HAMBURGER & MENU
+// // PRICE BUTTON
 
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
+const addPriceBtnClickHandler = () => {
+  let asd = document.querySelectorAll('.button_price')
+      asd.forEach(button => button.addEventListener('click', (e) => {
+    document.querySelector('.ico_btn-price').classList.remove('opened')
+    document.querySelector('.block__buttons').classList.remove('opened')
+    document.querySelector('.prices__block-wrapper').classList.remove('opened')
+    document.querySelector('.page-prices').classList.remove('opened')
 
-const toggleMenu = () => {
-  hamburger.classList.toggle('active');
-  menu.classList.toggle('active');
+    if (e.target.classList.contains('button_price')) {
+      let clickedPriceButton = e.target;
+      let openedTariffBlock = e.target.closest('.price-button__block');
+      if (!clickedPriceButton.classList.contains('opened')) {
+        addClickedPriceButton(clickedPriceButton, openedTariffBlock);
+      } else {
+        removeClickedPriceButton(clickedPriceButton, openedTariffBlock);
+      }
+    }
+  }));
 }
 
-hamburger.addEventListener('click', e => {
-  e.stopPropagation();
-  toggleMenu();
-});
-
-document.addEventListener('click', e => {
-  let target = e.target;
-  let its_hamburger = target === hamburger;
-  let menu_is_active = menu.classList.contains('active');
-
-  if (!its_hamburger && menu_is_active) {
-    e.stopPropagation();
-    toggleMenu();
-  }
-})
-
-// BUTTON PRICE
-
-const buttonPrice = document.querySelector('.button_price');
-
-const toggleButtonPrice = () => {
-  buttonPrice.classList.toggle('opened')
+const addClickedPriceButton = (clickedButton, openedTariffBlock) => {
+  removeClickedAllPriceButtons(openedTariffBlock);
+  clickedButton.classList.add('opened');
+  clickedButton.querySelector('.ico_btn-price').classList.add('opened');
+  openedTariffBlock.querySelector('.tariff__block').classList.add('opened');
 }
 
-buttonPrice.addEventListener('click', e => {
-  e.stopPropagation();
-  toggleButtonPrice();
-});
+const removeClickedPriceButton = (clickedButton, openedTariffBlock) => {
+  clickedButton.classList.remove('opened')
+  clickedButton.querySelector('.ico_btn-price').classList.remove('opened')
+  openedTariffBlock.querySelector('.tariff__block').classList.remove('opened');
+}
 
-// BUTTON CITY (ACCORDION)
+const removeClickedAllPriceButtons = () => {
+  document.querySelectorAll('.button_price').forEach(button => {
+    if (button.classList.contains('opened')){
+      button.classList.remove('opened')
+      button.querySelector('.ico_btn-price').classList.remove('opened')
+    }
+    document.querySelector('.block__buttons').classList.add('opened')
+    document.querySelector('.prices__block-wrapper').classList.add('opened')
+    document.querySelector('.page-prices').classList.add('opened')
+    document.querySelectorAll('.tariff__block').forEach(button => button.classList.remove('opened'));
+  });
+}
+
+
+// CITY BUTTON (ACCORDION)
 
 const contactsCityInner = document.querySelector('.contacts__city-inner');
 const contactsCityInnerIcon = document.querySelector('.ico_btn-city');
@@ -142,18 +200,14 @@ customSelCityList.addEventListener('click', e => {
   toggleCityInner();
 });
 
-const toggleElementText = (text) => {
-  contactsCityInner.innerHTML = text
-}
+// const toggleElementText = (text) => {
+//   contactsCityInner.innerHTML = text
+// }
 
 const handleClick = (event) => {
   console.log(event.target)
   console.log(event.target.innerText)
-
-  // contactsCityInner.outerHTML = `<div class="contacts__city-inner opened">
-  //   ${event.target.innerText}<span class="ico ico_btn-city"></span></div>`
   contactsCityInner.innerText = event.target.innerText
-
 }
 
 selectCityAddress.forEach((address) => {

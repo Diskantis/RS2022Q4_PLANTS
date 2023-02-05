@@ -10,6 +10,10 @@
   height: 16px;
 }
 
+.ico_btn-price.opened {
+  rotate: 180deg;
+}
+
 .ico_btn-city {
   background-image: url("../img/icons/ico-accord_btn-city.svg");
   background-repeat: no-repeat;

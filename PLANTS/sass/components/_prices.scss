@@ -21,6 +21,14 @@
   }
 }
 
+.page-prices.opened{
+  padding: 39px 109px 27px;
+
+  @include media-tablet {
+    padding: 40px 50px 60px;
+  }
+}
+
 .prices__title {
   color: $color-text_black;
   @extend %font-primary;
@@ -41,7 +49,7 @@
   }
 }
 
-.prices__block {
+.prices__block-wrapper {
   width: 332px;
   height: 282px;
   border: 1px solid $color-block_border;
@@ -53,16 +61,105 @@
   }
 }
 
+.prices__block-wrapper.opened{
+  height: 386px;
+}
+
 .block__buttons {
   height: 214px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 34px 41px;
+  margin: 34px 40px;
 
   @include media-mobile {
     height: 177px;
     margin: 29px 22px;
+  }
+}
+
+.block__buttons.opened{
+  height: 318px;
+}
+
+.price-button__block{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tariff__block {
+  display: none;
+}
+
+.tariff__block.opened{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.tariff-block__content {
+  @extend %font-primary;
+  width: 250px;
+  height: 104px;
+  background-color: #D6E7D2;
+  border-radius: 0 0 20px 20px;
+  padding: 5px 40px 5px 38px;
+
+  @include media-mobile {
+    width: 100%;
+    padding: 5px 10px;
+  }
+}
+
+.tariff-block__text {
+  @include font($size: 1.0rem, $height: 1.0rem, $weight: 300);
+  color: $color-text_h1_block;
+  position: relative;
+  margin-bottom: 6px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    content: "";
+    background: $color-tariff-line;
+    left: 0;
+    top: -10px;
+  }
+}
+
+.tariff-block__price {
+  @include font($size: 1.6rem, $height: 2.0rem, $weight: 700);
+  color: $color-text_colored;
+}
+
+.tariff-block__price-value {
+  @include font($size: 1.2rem, $height: 2.0rem);
+  color: $color-text_black;
+
+  @include media-mobile {
+    margin-bottom: 5px;
+  }
+}
+
+.tariff-block__link {
+  text-decoration-line: none;
+}
+
+.tariff-block__button{
+  width: 86px;
+  height: 25px;
+  color: $color-text_h1_block;
+  @include font ($size: 1.4rem, $height: 2.0rem, $weight: 700);
+  background: $color-bg_primary;
+  border: solid $color-bg_primary;
+  border-radius: 10px;
+  @extend %transition;
+  &:hover {
+    background: $color-text_colored;
+    border: solid $color-text_colored;
+    color: $color-bg_primary;
   }
 }
 
