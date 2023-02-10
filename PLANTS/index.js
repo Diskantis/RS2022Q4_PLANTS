@@ -38,7 +38,6 @@ const elements = {
   hamburger: document.querySelector('.hamburger'),
   menu: document.querySelector('.menu'),
   activeServiceButtonCounter: 0,
-  activePriceButtonCounter: 0,
   serviceCards: document.querySelectorAll('.service-card')
 }
 
@@ -199,10 +198,6 @@ customSelCityList.addEventListener('click', e => {
   e.stopPropagation();
   toggleCityInner();
 });
-
-// const toggleElementText = (text) => {
-//   contactsCityInner.innerHTML = text
-// }
 
 const handleClick = (event) => {
   console.log(event.target)

@@ -409,11 +409,11 @@ section, main, footer, header, article {
   font-family: Inter, Verdana, sans-serif;
 }
 
-.navigation, .button_colored, .logo, h2 {
+.navigation, .button_colored_contact, .button_colored, .logo, h2 {
   font-family: Inika, Verdana, sans-serif;
 }
 
-.custom-select__city-address, .custom-select__city-list, .contacts__city-inner, .contact__link, .tariff-block__button, .social_icon, .footer__rss, .footer__github, .navigation__link a, .button_colored, .button_welcome, .logo-path, .logo {
+.custom-select__city-address, .custom-select__city-list, .contacts__city-inner, .contact__link, .tariff-block__button, .service-card.blur, .social_icon, .footer__rss, .footer__github, .navigation__link a, .button_colored_contact, .button_colored, .button_welcome, .logo-path, .logo {
   transition: all 0.3s linear;
 }
 
@@ -588,10 +588,32 @@ h3 {
     font-style: normal;
   }
 }
-.button_colored:hover {
+.button_colored_contact {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  font-style: normal;
+  width: 161px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #E06733;
+  color: #E06733;
+}
+.button_colored_contact:hover {
   background-color: #E06733;
   border-color: #E06733;
   color: #FFFFFF;
+}
+@media (max-width: 380px) {
+  .button_colored_contact {
+    width: 121px;
+    height: 35px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-style: normal;
+  }
 }
 .button_price {
   display: flex;

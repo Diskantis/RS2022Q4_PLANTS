@@ -32,11 +32,29 @@
       height: 35px;
       @include font ($size: 1.5rem, $height: 2.0rem, $weight: 700);
     }
+  &_contact {
+    @extend %font-secondary;
+    @include font ($size: 2.0rem, $height: 2.6rem, $weight: 700);
+    width: 161px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid $color-text_colored;
+    color: $color-text_colored;
+    @extend %transition;
     &:hover {
       background-color: $color-text_colored;
       border-color: $color-text_colored;
       color: $color-bg_primary;
     }
+    @include media-mobile {
+      width: 121px;
+      height: 35px;
+      @include font ($size: 1.5rem, $height: 2.0rem, $weight: 700);
+    }
+  }
+
+
   }
   &_price {
     display: flex;
